@@ -1,0 +1,5 @@
+2025-06-23 16:53:22,328 - ERROR - 'Client' object has no attribute 'future_create_order'
+2025-06-23 17:09:17,555 - ERROR - 'Client' object has no attribute 'future_create_order'
+2025-06-23 17:11:55,527 - ERROR - 'Client' object has no attribute 'future_create_order'
+2025-06-23 17:15:44,760 - ERROR - APIError(code=-4003): Quantity less than or equal to zero.
+2025-06-23 17:16:18,404 - INFO - Order places: {'orderId': 4638373015, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJd92c355fe5db6b5a01a538', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.010', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750698981232}

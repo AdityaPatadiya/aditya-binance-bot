@@ -1,0 +1,15 @@
+import logging
+
+logging.basicConfig(
+    filename="bot/bot.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+
+def log_info(message):
+    logging.info(message)
+
+
+def log_error(error):
+    logging.error(str(error))
