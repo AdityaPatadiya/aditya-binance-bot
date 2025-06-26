@@ -1,4 +1,3 @@
 python-binance
 requests
 python-dotenv
-rich
