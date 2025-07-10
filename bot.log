@@ -150,3 +150,95 @@
 2025-07-10 06:07:32 | trading_bot | INFO     | Placing STOP_LIMIT order: SELL 0.01 BTCUSDT
 2025-07-10 06:07:32 | trading_bot | INFO     | Order Placed Successfully!
 2025-07-10 06:07:32 | trading_bot | INFO     | Order ID: 5235435697
+2025-07-10 10:41:23 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-07-10 10:41:23 | trading_bot | INFO     | Starting trading interface
+2025-07-10 10:41:23 | trading_bot | INFO     | Configuration loaded
+2025-07-10 10:41:24 | trading_bot | DEBUG    | API endpoint: https://testnet.binancefuture.com
+2025-07-10 10:41:24 | trading_bot | DEBUG    | API ping response: {}
+2025-07-10 10:41:25 | trading_bot | INFO     | Account balance: 15497.36984479 USDT | Available: 10296.86226084 USDT
+2025-07-10 10:41:25 | trading_bot | INFO     | API connection validated
+2025-07-10 10:41:25 | trading_bot | INFO     | Trading bot initialized successfully
+2025-07-10 10:41:25 | trading_bot | INFO     | Trading interface initialized
+2025-07-10 10:41:33 | trading_bot | DEBUG    | Loaded 528 valid symbols
+2025-07-10 10:41:42 | trading_bot | INFO     | Placing MARKET order: SELL 0.02 BTCUSDT
+2025-07-10 10:41:42 | trading_bot | INFO     | Market order placed successfully!
+2025-07-10 10:41:47 | trading_bot | INFO     | Placing MARKET order: SELL 0.02 BTCUSDT
+2025-07-10 10:41:48 | trading_bot | INFO     | Order Placed Successfully!
+2025-07-10 10:41:48 | trading_bot | INFO     | Order ID: 5236312891
+2025-07-10 10:50:35 | trading_bot | INFO     | Shutting down trading bot
+2025-07-10 10:50:38 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-07-10 10:50:38 | trading_bot | INFO     | Starting trading interface
+2025-07-10 10:50:38 | trading_bot | INFO     | Configuration loaded
+2025-07-10 10:50:38 | trading_bot | DEBUG    | API endpoint: https://testnet.binancefuture.com
+2025-07-10 10:50:38 | trading_bot | DEBUG    | API ping response: {}
+2025-07-10 10:50:38 | trading_bot | INFO     | Account balance: 15637.58909533 USDT | Available: 10308.73564616 USDT
+2025-07-10 10:50:38 | trading_bot | INFO     | API connection validated
+2025-07-10 10:50:38 | trading_bot | INFO     | Trading bot initialized successfully
+2025-07-10 10:50:38 | trading_bot | INFO     | Trading interface initialized
+2025-07-10 10:50:45 | trading_bot | DEBUG    | Loaded 528 valid symbols
+2025-07-10 10:50:54 | trading_bot | INFO     | Placing MARKET order: BUY 0.01 BTCUSDT
+2025-07-10 10:50:54 | trading_bot | INFO     | Order Placed Successfully!
+2025-07-10 10:50:54 | trading_bot | INFO     | Order ID: 5236344668
+2025-07-10 10:57:14 | trading_bot | INFO     | Shutting down trading bot
+2025-07-10 10:57:17 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-07-10 10:57:17 | trading_bot | INFO     | Starting trading interface
+2025-07-10 10:57:17 | trading_bot | INFO     | Configuration loaded
+2025-07-10 10:57:17 | trading_bot | DEBUG    | API endpoint: https://testnet.binancefuture.com
+2025-07-10 10:57:17 | trading_bot | DEBUG    | API ping response: {}
+2025-07-10 10:57:18 | trading_bot | INFO     | Account balance: 15637.14542649 USDT | Available: 10445.06267026 USDT
+2025-07-10 10:57:18 | trading_bot | INFO     | API connection validated
+2025-07-10 10:57:18 | trading_bot | INFO     | Trading bot initialized successfully
+2025-07-10 10:57:18 | trading_bot | INFO     | Trading interface initialized
+2025-07-10 10:57:23 | trading_bot | DEBUG    | Loaded 528 valid symbols
+2025-07-10 10:58:39 | trading_bot | INFO     | Placing STOP_LIMIT order: BUY 0.01 BTCUSDT
+2025-07-10 10:58:40 | trading_bot | INFO     | Order Placed Successfully!
+2025-07-10 10:58:40 | trading_bot | INFO     | Order ID: 5236368584
+2025-07-10 10:59:34 | trading_bot | INFO     | Placing STOP_LIMIT order: SELL 0.01 BTCUSDT
+2025-07-10 10:59:34 | trading_bot | INFO     | Order Placed Successfully!
+2025-07-10 10:59:34 | trading_bot | INFO     | Order ID: 5236370863
+2025-07-10 11:00:34 | trading_bot | INFO     | Placing OCO order: BUY 0.01 BTCUSDT
+2025-07-10 11:00:35 | trading_bot | ERROR    | OCO order failed: For BUY position, stop must be BEOW current price
+2025-07-10 11:00:35 | trading_bot | ERROR    | Order placement failed: For BUY position, stop must be BEOW current price
+2025-07-10 11:00:35 | trading_bot | ERROR    | Interface error: 'str' object has no attribute 'get'
+2025-07-10 11:08:28 | trading_bot | INFO     | Shutting down trading bot
+2025-07-10 11:08:30 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-07-10 11:08:30 | trading_bot | INFO     | Starting trading interface
+2025-07-10 11:08:30 | trading_bot | INFO     | Configuration loaded
+2025-07-10 11:08:31 | trading_bot | DEBUG    | API endpoint: https://testnet.binancefuture.com
+2025-07-10 11:08:31 | trading_bot | DEBUG    | API ping response: {}
+2025-07-10 11:08:31 | trading_bot | INFO     | Account balance: 15672.08717625 USDT | Available: 10509.20065811 USDT
+2025-07-10 11:08:31 | trading_bot | INFO     | API connection validated
+2025-07-10 11:08:31 | trading_bot | INFO     | Trading bot initialized successfully
+2025-07-10 11:08:31 | trading_bot | INFO     | Trading interface initialized
+2025-07-10 11:08:36 | trading_bot | DEBUG    | Loaded 528 valid symbols
+2025-07-10 11:09:05 | trading_bot | INFO     | Placing OCO order: BUY 0.01 BTCUSDT
+2025-07-10 11:10:42 | trading_bot | INFO     | Placing TWAP order: BUY 0.01 BTCUSDT
+2025-07-10 11:10:42 | trading_bot | INFO     | Retrieved balances for 1 assets
+2025-07-10 11:10:42 | trading_bot | INFO     | Executing TWAP slice 1/5
+2025-07-10 11:10:42 | trading_bot | ERROR    | Slice1 failed: 'Client' object has no attribute 'future_create_order'
+2025-07-10 11:12:19 | trading_bot | INFO     | Shutting down trading bot
+2025-07-10 11:12:22 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-07-10 11:12:22 | trading_bot | INFO     | Starting trading interface
+2025-07-10 11:12:22 | trading_bot | INFO     | Configuration loaded
+2025-07-10 11:12:22 | trading_bot | DEBUG    | API endpoint: https://testnet.binancefuture.com
+2025-07-10 11:12:22 | trading_bot | DEBUG    | API ping response: {}
+2025-07-10 11:12:23 | trading_bot | INFO     | Account balance: 15706.57410801 USDT | Available: 10706.76191506 USDT
+2025-07-10 11:12:23 | trading_bot | INFO     | API connection validated
+2025-07-10 11:12:23 | trading_bot | INFO     | Trading bot initialized successfully
+2025-07-10 11:12:23 | trading_bot | INFO     | Trading interface initialized
+2025-07-10 11:12:26 | trading_bot | DEBUG    | Loaded 528 valid symbols
+2025-07-10 11:12:35 | trading_bot | INFO     | Placing TWAP order: BUY 0.01 BTCUSDT
+2025-07-10 11:12:36 | trading_bot | INFO     | Retrieved balances for 1 assets
+2025-07-10 11:12:36 | trading_bot | INFO     | Executing TWAP slice 1/5
+2025-07-10 11:14:45 | trading_bot | INFO     | Executing TWAP slice 2/5
+2025-07-10 11:16:55 | trading_bot | INFO     | Executing TWAP slice 3/5
+2025-07-10 11:19:03 | trading_bot | INFO     | Executing TWAP slice 4/5
+2025-07-10 11:21:16 | trading_bot | INFO     | Executing TWAP slice 5/5
+2025-07-10 11:23:29 | trading_bot | INFO     | <class 'list'>
+2025-07-10 11:23:29 | trading_bot | INFO     | [{'orderId': 5236408767, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJda76f63d19fc1c10c87a0d', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752145958228}, {'orderId': 5236415274, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ5db6a6493f8e90ec77a947', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752146086939}, {'orderId': 5236422410, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ8652fa3965099998a32d15', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752146215888}, {'orderId': 5236428851, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJbd6c68bcb573137283b4cd', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752146346460}, {'orderId': 5236434994, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ49af5295fdc6b2e59727e4', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752146478356}]
+2025-07-10 11:25:17 | trading_bot | INFO     | Shutting down trading bot

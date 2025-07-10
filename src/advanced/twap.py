@@ -16,7 +16,7 @@ def twap_order(client, symbol, side, total_quantity, duration_min, slices=4):
         for i in range(slices):
             try:
                 logger.info(f"Executing TWAP slice {i+1}/{slices}")
-                result = client.future_create_order(
+                result = client.futures_create_order(
                     symbol = symbol,
                     side = side,
                     type=FUTURE_ORDER_TYPE_MARKET,

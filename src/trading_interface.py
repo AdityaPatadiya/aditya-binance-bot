@@ -122,90 +122,28 @@ class TradingInterface:
             error_msg="Quantity must be a positive number"
         ))
 
-        params = {}
-        current_price = None
-        if order_type in ("LIMIT", "STOP_LIMIT", "OCO"):
-            try:
-                ticker = self.bot.client.futures_symbol_ticker(symbol=symbol)
-                current_price = float(ticker['price'])
-                print(f"Current market price: {current_price:.2f}")
-            except Exception as e:
-                print(f"Couldn't get current price: {str(e)}")
+        if order_type == "MARKET":
+            params = self._market_order_flow()
 
-        if order_type in ("LIMIT", "STOP_LIMIT", "OCO"):
-            params['price'] = float(self._get_valid_input(
-                prompt="Enter limit price (actual order execution price): ",
-                validator=lambda x: x.replace('.', '', 1).isdigit() and float(x) > 0,
-                error_msg="Price must be a positive number"
-            ))
+        elif order_type == "LIMIT":
+            params = self._limit_order_price(symbol, side, quantity)
 
-            if order_type == "STOP_LIMIT":
-                params['stop_price'] = float(self._get_valid_input(
-                    prompt="Enter stop price (trigger price): ",
-                    validator=lambda x: x.replace('.', '', 1).isdigit() and float(x) > 0,
-                    error_msg="Stop price must be a positive number"
-                ))
+        elif order_type == "STOP_LIMIT":
+            params = self._stop_limit_order_flow(symbol, side, quantity)
 
-            if order_type in ("LIMIT", "STOP_LIMIT") and current_price is not None:
-                if abs(params['price'] - current_price) > current_price * 0.2:
-                    if not self._get_yes_no("Warning: Price is >20% away from market. Continue? (y/n): "):
-                        print("Order cancelled")
-                        return
+        elif order_type == "OCO":
+            params = self._oco_order_flow(symbol, side, quantity)
 
-        if order_type == 'OCO':
-            try:
-                ticker = self.bot.client.futures_symbol_ticker(symbol=symbol)
-                current_price = float(ticker['price'])
-                print(f"Current markt price: {current_price:.2f}")
-            except Exception as e:
-                print(f"Couldn't get current price: {str(e)}")
-                return
+        elif order_type == "TWAP":
+            params = self._twap_order_flow(symbol, side, quantity)
 
-            params['price'] = float(self._get_valid_input(
-                prompt = "Enter take-profit price: ",
-                validator = lambda x: x.replace('.', '', 1).isdigit() and float(x) > 0,
-                error_msg = "Price must be a positive number"
-            ))
-            
-            while True:
-                params['stop_price'] = float(self._get_valid_input(
-                    prompt="Enter stop price: ",
-                    validator=lambda x: x.replace('.', '', 1).isdigit() and float(x) > 0,
-                    error_msg = "Stop price must be a positive number"
-                ))
-
-                if side == 'BUY' and params['stop_price'] > current_price:
-                    print("For BUY position, stop price must be BELOW current price")
-                elif side == "SELL" and params['stop_price'] < current_price:
-                    print("For SELL position, stop price must be ABOVE current price")
-                else:
-                    break
-
-            params['stop_limit_price'] = float(self._get_valid_input(
-                prompt = "Enter the stop-limit execution price (MUST be below stop price for BUY): " if side == 'BUY' else "Enter the stop-limit execution price (MUST be above stop price for SELL): ",
-                validator = lambda x: x.replace('.', '', 1).isdigit() and float(x) > 1,
-                error_msg = "Stop-limit price must be a positive number"
-            ))
-
-        if order_type == 'TWAP':
-            params['duration_min'] = float(self._get_valid_input(
-                prompt = "Enter duration in minutes: ",
-                validator = lambda x: x.replace('.', '', 1).isdigit() and float(x) > 0,
-                error_msg = "Duration must be a positive number"
-            ))
-
-            params['slices'] = int(self._get_valid_input(
-                prompt = "Enter number of slices (4-20): ",
-                validator = lambda x: x.isdigit() and 4 <= int(x) <= 20,
-                error_msg = "Slices must be integer between 4-20"
-            ))
 
         print("\n┌─────────────── ORDER SUMMARY ─────────────────┐")
         print(f"│ Symbol: {symbol:>30}        │")
         print(f"│ Type: {order_type:>31}      │")
         print(f"│ Side: {side:>32}            │")
         print(f"│ Quantity: {quantity:>26.4f}    │")
-        
+
         if order_type == "TWAP":
             print(f"| {'Duration Min':<15}: {params['duration_min']:>18.2f}  |")
             print(f"| {'Slices':<15}: {params['slices']:>18}  |")
@@ -236,8 +174,8 @@ class TradingInterface:
                         logger.info(type(response))
                         logger.info(response)
                         order_ids = [str(r.get('orderId', 'N/A')) for r in response]
-                        print(f"\nTWAP partially executed! {len(response)} slices completed")
-                        print(f"Slice IDs: {', '.join(order_ids)}")
+                        logging.info(f"\nTWAP partially executed! {len(response)} slices completed")
+                        logging.info(f"Slice IDs: {', '.join(order_ids)}")
                     else:
                         print(f"\nUnexpected TWAP response: {response}")
                 elif order_type == "OCO":
@@ -252,14 +190,90 @@ class TradingInterface:
                     logger.info("Order Placed Successfully!")
                     logger.info(f"Order ID: {response.get('orderId')}")
 
-            else:
+            if isinstance(response, dict):
                 order_id = response.get('orderID', 'N/A')
                 print(f"\nOrder placed successfully! ID: {order_id}")
+            else:
+                order_id = str(response)
 
                 if order_type == "MARKET" and isinstance(response, dict) and 'fills' in response:
                     print("\nExecution Details:")
                     for fill in response['fills']:
                         print(f"- Price: {fill['price']} | Qty: {fill['qty']}")
+
+    def _market_order_flow(self):
+        return {}
+
+    def _limit_order_price(self, symbol, side, quantity):
+        current_price = float(self.bot.client.futures_symbol_ticker(symbol=symbol)['price'])
+        print(f"Current market price: {current_price:.2f}")
+
+        price = float(self._get_valid_input(
+            prompt="Enter limit price: ",
+            validator=lambda x: x.replace('.', '', 1).isdigit() and float(x) > 0,
+            error_msg="Price must be a positive number"
+        ))
+        return {"price": price}
+
+    def _stop_limit_order_flow(self, symbol, side, quantity):
+        current_price = float(self.bot.client.futures_symbol_ticker(symbol=symbol)['price'])
+        print(f"Current market price: {current_price:.2f}")
+
+        stop_price = float(self._get_valid_input(
+            prompt="Enter stop price (trigger): ",
+            validator=lambda x: x.replace('.', '', 1).isdigit(),
+            error_msg="Stop price must be a number"
+        ))
+
+        limit_price = float(self._get_valid_input(
+            prompt="Enter limit price (actual execution): ",
+            validator=lambda x: x.replace('.', '', 1).isdigit(),
+            error_msg="Limit price must be a number"
+        ))
+
+        return {"stop_price": stop_price, "price": limit_price}
+
+    def _oco_order_flow(self, symbol, side,quantity):
+        current_price = float(self.bot.client.futures_symbol_ticker(symbol=symbol)['price'])
+        print(f"Current market price: {current_price:.2f}")
+
+        limit_price = float(self._get_valid_input(
+            prompt="Enter limit price (buy-the-dip or take-profit): ",
+            validator=lambda x: x.replace('.', '', 1).isdigit(),
+            error_msg="Limit price must be a number"
+        ))
+
+        stop_price = float(self._get_valid_input(
+            prompt="Enter stop price (trigger for stop-limit): ",
+            validator=lambda x: x.replace('.', '',1).isdigit(),
+            error_msg="Stop price must be a number"
+        ))
+
+        stop_limit_price = float(self._get_valid_input(
+            prompt="Enter stop-limit price (actual execution): ",
+            validator=lambda x: x.replace('.', '', 1).isdigit(),
+            error_msg="Stop-limit price must be a number"
+        ))
+
+        return {
+            "price": limit_price,
+            "stop_price": stop_price,
+            "stop_limit_price": stop_limit_price
+        }
+
+    def _twap_order_flow(self, symbol, side, quantity):
+        duration = float(self._get_valid_input(
+            prompt="Enter duration in minutes: ",
+            validator=lambda x: x.replace('.', '', 1).isdigit(),
+            error_msg="Duration must be a number"
+        ))
+        slices = int(self._get_valid_input(
+            prompt="Enter numbe of slices (4-20): ",
+            validator=lambda x: x.isdigit() and 4 <= int(x) <= 20,
+            error_msg="Slices must be between 4 and 20"
+        ))
+
+        return {"duration_min": duration, "slices": slices}
 
     def _get_valid_input(self, prompt: str, validator: Callable[[str], bool], error_msg: str) -> str:
         """Get validated user input with retry"""
