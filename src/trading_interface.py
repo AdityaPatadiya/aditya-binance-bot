@@ -1,7 +1,7 @@
 import sys
 import logging
 from typing import Callable, TypeVar
-from tradingbot import TradingBot
+from bot import TradingBot
 from logger import logger
 
 T = TypeVar('T')
@@ -11,7 +11,7 @@ class TradingInterface:
     def __init__(self) -> None:
         self.bot = TradingBot()
         logger.info("Trading interface initialized")
-    
+
     def run(self):
         """Main interactive loop"""
         while True:
@@ -106,6 +106,7 @@ class TradingInterface:
             validator=lambda x: x.upper() in ("MARKET", "LIMIT", "STOP_LIMIT", "OCO", "TWAP"),
             error_msg="Invalid order type. Choose MARKET/LIMIT/STOP_LIMIT/OCO/TWAP"
         ).upper()
+        params = {}
 
         # get side
         side = self._get_valid_input(
@@ -133,10 +134,17 @@ class TradingInterface:
 
         if order_type in ("LIMIT", "STOP_LIMIT", "OCO"):
             params['price'] = float(self._get_valid_input(
-                prompt="Enter price: ",
+                prompt="Enter limit price (actual order execution price): ",
                 validator=lambda x: x.replace('.', '', 1).isdigit() and float(x) > 0,
                 error_msg="Price must be a positive number"
             ))
+
+            if order_type == "STOP_LIMIT":
+                params['stop_price'] = float(self._get_valid_input(
+                    prompt="Enter stop price (trigger price): ",
+                    validator=lambda x: x.replace('.', '', 1).isdigit() and float(x) > 0,
+                    error_msg="Stop price must be a positive number"
+                ))
 
             if order_type in ("LIMIT", "STOP_LIMIT") and current_price is not None:
                 if abs(params['price'] - current_price) > current_price * 0.2:
@@ -197,8 +205,10 @@ class TradingInterface:
         print(f"│ Type: {order_type:>31}      │")
         print(f"│ Side: {side:>32}            │")
         print(f"│ Quantity: {quantity:>26.4f}    │")
-        print(f"| {'Duration Min':<15}: {params['duration_min']:>18.2f}  |")
-        print(f"| {'Slices':<15}: {params['slices']:>18}  |")
+        
+        if order_type == "TWAP":
+            print(f"| {'Duration Min':<15}: {params['duration_min']:>18.2f}  |")
+            print(f"| {'Slices':<15}: {params['slices']:>18}  |")
         for k, v in params.items():
             display_name = k.replace('_', ' ').title()
             if k == "price":
@@ -230,14 +240,17 @@ class TradingInterface:
                         print(f"Slice IDs: {', '.join(order_ids)}")
                     else:
                         print(f"\nUnexpected TWAP response: {response}")
-            elif order_type == "OCO":
-                order_ids = [str(r.get('orderID', 'N/A')) for r in response]
-                print(f"\nOCO order placed successfully! Order IDs: {', '.join(order_ids)}")
+                elif order_type == "OCO":
+                    order_ids = [str(r.get('orderID', 'N/A')) for r in response]
+                    print(f"\nOCO order placed successfully! Order IDs: {', '.join(order_ids)}")
 
-                print("\nOrder Details:")
-                for i, order in enumerate(response):
-                    order_type_desc = "Take-Profit Limit" if i == 0 else "Stop-Loss"
-                    print(f"{order_type_desc} Order: {order_ids[i]}")
+                    print("\nOrder Details:")
+                    for i, order in enumerate(response):
+                        order_type_desc = "Take-Profit Limit" if i == 0 else "Stop-Loss"
+                        print(f"{order_type_desc} Order: {order_ids[i]}")
+                elif order_type == "MARKET" or order_type == "LIMIT" or order_type == "STOP_LIMIT":
+                    logger.info("Order Placed Successfully!")
+                    logger.info(f"Order ID: {response.get('orderId')}")
 
             else:
                 order_id = response.get('orderID', 'N/A')
@@ -367,6 +380,7 @@ class TradingInterface:
 
 if __name__ == "__main__":
     try:
+        logger.info("\n" + "-" * 100)
         logger.info("Starting trading interface")
         interface = TradingInterface()
         interface.run()

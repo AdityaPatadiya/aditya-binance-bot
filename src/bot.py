@@ -2,8 +2,10 @@ from binance import Client
 from binance.exceptions import BinanceAPIException
 from config import Config
 from logger import logger
-from typing import Optional, Dict, List, Any, Tuple
-from order_types import OrderTypes
+from typing import Optional, Any, Tuple
+import limit_orders
+import market_orders
+from advanced import stop_limit, oco, twap
 
 
 class TradingBot:
@@ -25,19 +27,20 @@ class TradingBot:
 
             self._validate_connection()
             logger.info("Trading bot initialized successfully")
-        
+
         except Exception as e:
             logger.critical(f"Initialized failed: {str(e)}")
             raise
-    
+
     def _validate_connection(self):
         """Verify API connectivity and account status"""
         try:
             response = self.client.futures_ping()
             logger.debug(f"API ping response: {response}")
 
-            account_info = self.client.futures_account()
-            logger.debug(f"Account info: {account_info}")
+            # account_info = self.client.futures_account()
+            # logger.debug(f"Account info: {account_info}")
+
 
             balance = self.client.futures_account_balance()
             usdt_balance = next(
@@ -52,9 +55,9 @@ class TradingBot:
                 )
             else:
                 logger.warning("USDT balance not found")
-            
+
             logger.info("API connection validated")
-        
+
         except BinanceAPIException as api_error:
             logger.error(
                 f"API error {api_error.status_code}: {api_error.message}"
@@ -87,10 +90,10 @@ class TradingBot:
                 except Exception as e:
                     logger.error(f"Error loading symbols {str(e)}")
                     raise RuntimeError("Symbol list unavailable")
-            
+
             if symbol in self._valid_symbols:
                 return True
-            
+
             logger.warning(f"Invalid symbol: {symbol}. Valid example: {", ".join(sorted(self._valid_symbols)[:3])}")
             return False
         except RuntimeError:
@@ -116,28 +119,30 @@ class TradingBot:
             str_kwargs = {k: str(v) for k, v in kwargs.items()}
 
             if order_type == "MARKET":
-                result = OrderTypes.market_order(
+                result = market_orders.market_order(
                     self.client, symbol, side, quantity
                 )
             elif order_type == "LIMIT":
                 if 'price' not in kwargs:
                     return False, "Price is required for limitorders"
-                result = OrderTypes. limit_order(
+                result = limit_orders.limit_order(
                     self.client, symbol, side, quantity, str_kwargs['price']
                 )
             elif order_type == "STOP_LIMIT":
                 if 'price' not in kwargs or 'stop_price' not in kwargs:
                     return False, "Price and stop_price are required for stop-limit orders"
-                result = OrderTypes.stop_limit_order(
+                result = stop_limit.stop_limit_order(
                     self.client, symbol, side, quantity, kwargs['price'], kwargs['stop_price']
                 )
             elif order_type == "OCO":
                 if 'price' not in kwargs or 'stop_price' not in kwargs or 'stop_limit_price' not in kwargs:
                     return False, "Price, stop_price, and stop_limit_price are required for OCO orders"
-                result = OrderTypes.oco_order(
+                result = oco.oco_order(
                     self.client, symbol, side, quantity, kwargs['price'], kwargs['stop_price'], kwargs['stop_limit_price']
                 )
             elif order_type == "TWAP":
+                if 'duration_min' not in kwargs:
+                    return False, "Missing 'duration_min' for TWAP order"
                 try:
                     ticker = self.client.futures_symbol_ticker(symbol=symbol)
                     price = float(ticker['price'])
@@ -156,7 +161,7 @@ class TradingBot:
                 except Exception as e:
                     logger.error(f"Margin check failed: {str(e)}")
                     return False, "Margin verification error"
-                result = OrderTypes.twap_order(
+                result = twap.twap_order(
                     self.client, symbol, side, quantity, kwargs['duration_min'], kwargs.get('slices', 4)
                 )
             else:
@@ -212,7 +217,7 @@ class TradingBot:
                     'time': order['time'],
                     'stopPrice': float(order.get('stopPrice', 0))
                 })
-            
+
             logger.info(f"Retrieved {len(formatted)} open orders")
             return formatted
         except BinanceAPIException as e:
@@ -221,7 +226,7 @@ class TradingBot:
         except Exception as e:
             logger.error(f"Unexpected order error: {str(e)}")
             raise RuntimeError("Failed to get orders")
-    
+
     def get_trade_history(self, symbol: str, limit: int = 10) -> list[dict]:
         """Get recent trades for a symbol"""
         try:
@@ -248,7 +253,7 @@ class TradingBot:
         except Exception as e:
             logger.error(f"Unexpected trade error: {str(e)}")
             raise RuntimeError("Failed to get trade history")
-    
+
     def cancel_order(self, symbol: str, order_id: int) -> Tuple[bool, Any]:
         """Cancel an open order"""
         try:
@@ -294,10 +299,10 @@ class TradingBot:
 
             if not usdt_balance:
                 return 0
-            
+
             ticker = self.client.futures_symbol_ticker(symbol=symbol)
             price = float(ticker['price'])
-            
+
             return (usdt_balance * leverage) / price
         except Exception as e:
             return 0

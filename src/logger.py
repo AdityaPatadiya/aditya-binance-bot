@@ -9,11 +9,12 @@ def setup_logger():
     logger = logging.getLogger('trading_bot')
     logger.setLevel(logging.DEBUG)
 
-    log_dir = "logs"
-    os.makedirs(log_dir, exist_ok=True)
+    # log_dir = "logs"
+    # os.makedirs(log_dir, exist_ok=True)
 
-    timestamp = datetime.now().strftime(r"%Y%m%d_%H%M%S")
-    log_file = f"{log_dir}/bot_{timestamp}.log"
+    # timestamp = datetime.now().strftime(r"%Y%m%d_%H%M%S")
+    # log_file = f"{log_dir}/bot_{timestamp}.log"
+    log_file = "bot.log"
     file_handler = logging.FileHandler(log_file, mode='a')
 
     console_handler = logging.StreamHandler(sys.stdout)
