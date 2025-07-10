@@ -1,25 +1,51 @@
 # 🟡 Binance Futures Trading Bot (CLI)
 
-A Command-Line Interface (CLI) based Binance Futures Trading Bot built using the official [Binance Python SDK](https://github.com/binance/binance-connector-python). This bot supports placing various types of futures orders, account balance checks, order cancellations, and more.
+A modular Command-Line Interface (CLI) Binance Futures Trading Bot built using the official [Binance Python SDK](https://github.com/binance/binance-connector-python).  
+It supports multiple futures order types, account operations, and structured logging—all designed for **educational and testnet usage**.
 
 ---
 
 ## 📌 Features
 
 - ✅ Interactive CLI Menu
-- 📈 Place orders:
-  - MARKET
-  - LIMIT
-  - STOP_LIMIT
-  - OCO (One Cancels Other)
-  - TWAP (Time-Weighted Average Price)
-- 🧾 View trade history and open orders
-- 💰 Check account balance
-- 🗑 Cancel open orders
-- 🔐 Secure API key handling with `.env`
-- 🧠 TWAP slicing logic with interval-based execution
-- 📋 Structured logging using Python's `logging` module
+- ✅ Core & Advanced Order Types:
+  - `MARKET` – Immediate execution at market price
+  - `LIMIT` – Execute at a specific price
+  - `STOP_LIMIT` – Conditional trigger with limit execution
+  - `OCO` – One-Cancels-the-Other (Stop-Limit + Take-Profit)
+  - `TWAP` – Time-Weighted Average Price (sliced execution)
+- 💰 Account management:
+  - Check account balance
+  - View open orders
+  - View trade history
+  - Cancel active orders
+- 🔐 Secure credential handling via `.env`
+- 🪵 Structured rotating logs for debugging
 
+---
+
+## 📂 Project Structure
+```
+trading_bot/
+├── src/
+│   ├── advanced/
+│   │   ├── oco.py                    # One-Cancels-Other order implementation
+│   │   ├── stop_limit.py             # Stop-limit order implementation
+│   │   └── twap.py                   # Time-Weighted Average Price implementation
+│   ├── bot.py                        # Main bot logic
+│   ├── config.py                     # Configuration and API key management
+│   ├── limit_orders.py               # Limit order implementations
+│   ├── logger.py                     # Logging configuration
+│   ├── market_orders.py              # Market order implementations
+│   └── trading_interface.py          # CLI menu and user interaction
+├── .env                             # Environment variables (API keys)
+├── .env.example                     # Sample environment configuration
+├── .gitignore                       # Git ignore rules
+├── bot.log                          # Application log file
+├── README.md                        # Project documentation
+├── report.pdf                       # Project report/documentation
+└── requirements.txt                 # Python dependencies
+```
 ---
 
 ## 🚀 Getting Started
@@ -28,46 +54,34 @@ A Command-Line Interface (CLI) based Binance Futures Trading Bot built using the
 
 ```bash
 git clone https://github.com/yourusername/binance-futures-bot.git
-cd binance-futures-bot
+cd aditya-binance-bot
 ```
 
-### 2️⃣ Setup a virtual environment (recommended)
-
-```bash
+### 2️⃣ Set up a virtual environment
+```
 python3 -m venv venv
-source venv/bin/activate   # or venv\Scripts\activate on Windows
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 ### 3️⃣ Install dependencies
-
-```bash
+```
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Configure API keys
-
-Create a `.env` file in the project root with the following content:
-
+### 4️⃣ Configure your Binance Testnet API credentials
+`cp .env.example .env`
 ```
-API_KEY=your_binance_api_key
-API_SECRET=your_binance_api_secret
+API_KEY=your_testnet_api_key
+API_SECRET=your_testnet_secret
 ```
-
-Use the Binance **Futures Testnet** to avoid risking real funds:
-- Testnet signup: https://testnet.binancefuture.com
+Get your API keys from the [Binance Futures Testnet](https://testnet.binancefuture.com/en/futures/BTCUSDT).
 
 ---
+## Usage
+Launch the trading bot:
+`python src/trading_interface.py`
 
-## 🧪 Usage
-
-Start the bot using:
-
-```bash
-python main.py
-```
-
-Follow the on-screen prompts:
-
+You'll see:
 ```
 ┌────────────────────────────────────────────┐
 │        BINANCE FUTURES TRADING BOT         │
@@ -82,36 +96,27 @@ Follow the on-screen prompts:
 ```
 
 ---
+## Order Types Explained
+`Market Order`
+Execute immediately at current market price.
 
-## 🛠 Project Structure
+`Limit Order`
+Place an order to buy/sell at a specific price or better.
 
-```
-├── main.py               # CLI interface
-├── tradingbot.py         # Core trading logic
-├── order_types.py        # Encapsulated order functions
-├── config.py             # Loads credentials from .env
-├── logger.py             # Logging configuration
-├── requirements.txt      # Python dependencies
-└── .env.example          # Sample environment config
-```
+`Stop-Limit Order`
+A stop price triggers the placement of a limit order. Useful for managing risk.
 
----
+`OCO (One Cancels Other)`
+Two orders are placed simultaneously: one take-profit, one stop-loss. When one is triggered, the other is canceled.
 
-## 📄 Example `.env.example`
+`TWAP (Time-Weighted Average Price)`
+Breaks a large order into smaller slices and executes them over time to reduce market impact.
 
-```env
-API_KEY=your_api_key_here
-API_SECRET=your_api_secret_here
-```
 
----
-
-## 🪵 Logging
-
-All actions and errors are logged in `logs` using a rotating log system. Log entries include timestamps, levels, and detailed messages to aid debugging.
+## Logging
+All activities are logged with timestamps and severity levels.
+Logs are stored in the `bot.log` directory with a rotating file handler.
 
 ---
-
-## ⚠️ Disclaimer
-
-This bot is intended for **educational** and **testnet** use only. It is **not suitable for live trading** without extensive testing and risk management. Use at your own risk.
+> [!WARNING]
+> This bot is intended for educational and testnet use only. It is not suitable for live trading without extensive testing and risk management. Use at your own risk.
