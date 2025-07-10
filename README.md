@@ -97,19 +97,19 @@ You'll see:
 
 ---
 ## Order Types Explained
-`Market Order`
+- `Market Order`
 Execute immediately at current market price.
 
-`Limit Order`
+- `Limit Order`
 Place an order to buy/sell at a specific price or better.
 
-`Stop-Limit Order`
+- `Stop-Limit Order`
 A stop price triggers the placement of a limit order. Useful for managing risk.
 
-`OCO (One Cancels Other)`
+- `OCO (One Cancels Other)`
 Two orders are placed simultaneously: one take-profit, one stop-loss. When one is triggered, the other is canceled.
 
-`TWAP (Time-Weighted Average Price)`
+- `TWAP (Time-Weighted Average Price)`
 Breaks a large order into smaller slices and executes them over time to reduce market impact.
 
 
