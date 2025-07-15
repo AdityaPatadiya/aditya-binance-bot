@@ -11,7 +11,7 @@ def oco_order(client, symbol, side, quantity, price, stop_price, stop_limit_pric
         symbol=symbol,
         side='SELL' if side == 'BUY' else 'BUY',
         type='LIMIT',
-        timeInForce='GTC',
+        timeInForce='GTC', # Good Till Canceled
         quantity=str(quantity),
         price=str(price)
         )
@@ -19,7 +19,7 @@ def oco_order(client, symbol, side, quantity, price, stop_price, stop_limit_pric
         stop_order_type = 'STOP_MARKET'
 
         if side == 'BUY' and stop_price > current_price:
-            raise ValueError("For BUY position, stop must be BEOW current price")
+            raise ValueError("For BUY position, stop must be BELOW current price")
         elif side == "SELL" and stop_price < current_price:
             raise ValueError("For SELL position, stop price must be ABOVE current price")
 

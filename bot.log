@@ -242,3 +242,32 @@
 2025-07-10 11:23:29 | trading_bot | INFO     | <class 'list'>
 2025-07-10 11:23:29 | trading_bot | INFO     | [{'orderId': 5236408767, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJda76f63d19fc1c10c87a0d', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752145958228}, {'orderId': 5236415274, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ5db6a6493f8e90ec77a947', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752146086939}, {'orderId': 5236422410, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ8652fa3965099998a32d15', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752146215888}, {'orderId': 5236428851, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJbd6c68bcb573137283b4cd', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752146346460}, {'orderId': 5236434994, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ49af5295fdc6b2e59727e4', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752146478356}]
 2025-07-10 11:25:17 | trading_bot | INFO     | Shutting down trading bot
+2025-07-15 05:50:10 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-07-15 05:50:10 | trading_bot | INFO     | Starting trading interface
+2025-07-15 05:50:10 | trading_bot | INFO     | Configuration loaded
+2025-07-15 05:50:24 | trading_bot | CRITICAL | Initialized failed: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Read timed out. (read timeout=10)
+2025-07-15 05:50:24 | trading_bot | CRITICAL | Application crashed: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Read timed out. (read timeout=10)
+2025-07-15 05:51:54 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-07-15 05:51:54 | trading_bot | INFO     | Starting trading interface
+2025-07-15 05:51:54 | trading_bot | INFO     | Configuration loaded
+2025-07-15 05:52:04 | trading_bot | CRITICAL | Initialized failed: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x795056de6c30>: Failed to resolve 'testnet.binance.vision' ([Errno -3] Temporary failure in name resolution)"))
+2025-07-15 05:52:04 | trading_bot | CRITICAL | Application crashed: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x795056de6c30>: Failed to resolve 'testnet.binance.vision' ([Errno -3] Temporary failure in name resolution)"))
+2025-07-15 11:33:23 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-07-15 11:33:23 | trading_bot | INFO     | Starting trading interface
+2025-07-15 11:33:23 | trading_bot | INFO     | Configuration loaded
+2025-07-15 11:33:23 | trading_bot | DEBUG    | API endpoint: https://testnet.binancefuture.com
+2025-07-15 11:33:23 | trading_bot | DEBUG    | API ping response: {}
+2025-07-15 11:33:25 | trading_bot | INFO     | Account balance: 20246.61088424 USDT | Available: 28333.82259665 USDT
+2025-07-15 11:33:25 | trading_bot | INFO     | API connection validated
+2025-07-15 11:33:25 | trading_bot | INFO     | Trading bot initialized successfully
+2025-07-15 11:33:25 | trading_bot | INFO     | Trading interface initialized
+2025-07-15 11:33:29 | trading_bot | INFO     | Retrieved balances for 1 assets
+2025-07-15 11:33:29 | trading_bot | INFO     | Balance checked: {'USDT': {'balance': 20246.61088424, 'available': 28332.21085594, 'margin': 22959.24000713}}
+2025-07-15 11:33:50 | trading_bot | INFO     | Retrieved 0 open orders
+2025-07-15 11:33:57 | trading_bot | DEBUG    | Loaded 531 valid symbols
+2025-07-15 11:33:57 | trading_bot | INFO     | Retrieved 10 trades for BTCUSDT
+2025-07-15 11:33:57 | trading_bot | INFO     | Viewed trade history for BTCUSDT
+2025-07-15 11:34:21 | trading_bot | INFO     | Shutting down trading bot

@@ -1,5 +1,4 @@
 import os
-from threading import Lock
 from dotenv import load_dotenv
 from typing import Dict, Any
 

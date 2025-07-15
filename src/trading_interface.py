@@ -126,16 +126,16 @@ class TradingInterface:
             params = self._market_order_flow()
 
         elif order_type == "LIMIT":
-            params = self._limit_order_price(symbol, side, quantity)
+            params = self._limit_order_price(symbol)
 
         elif order_type == "STOP_LIMIT":
-            params = self._stop_limit_order_flow(symbol, side, quantity)
+            params = self._stop_limit_order_flow(symbol)
 
         elif order_type == "OCO":
-            params = self._oco_order_flow(symbol, side, quantity)
+            params = self._oco_order_flow(symbol)
 
         elif order_type == "TWAP":
-            params = self._twap_order_flow(symbol, side, quantity)
+            params = self._twap_order_flow(symbol)
 
 
         print("\n┌─────────────── ORDER SUMMARY ─────────────────┐")
@@ -204,7 +204,7 @@ class TradingInterface:
     def _market_order_flow(self):
         return {}
 
-    def _limit_order_price(self, symbol, side, quantity):
+    def _limit_order_price(self, symbol):
         current_price = float(self.bot.client.futures_symbol_ticker(symbol=symbol)['price'])
         print(f"Current market price: {current_price:.2f}")
 
@@ -215,7 +215,7 @@ class TradingInterface:
         ))
         return {"price": price}
 
-    def _stop_limit_order_flow(self, symbol, side, quantity):
+    def _stop_limit_order_flow(self, symbol):
         current_price = float(self.bot.client.futures_symbol_ticker(symbol=symbol)['price'])
         print(f"Current market price: {current_price:.2f}")
 
@@ -233,7 +233,7 @@ class TradingInterface:
 
         return {"stop_price": stop_price, "price": limit_price}
 
-    def _oco_order_flow(self, symbol, side,quantity):
+    def _oco_order_flow(self, symbol):
         current_price = float(self.bot.client.futures_symbol_ticker(symbol=symbol)['price'])
         print(f"Current market price: {current_price:.2f}")
 
@@ -261,7 +261,7 @@ class TradingInterface:
             "stop_limit_price": stop_limit_price
         }
 
-    def _twap_order_flow(self, symbol, side, quantity):
+    def _twap_order_flow(self, symbol):
         duration = float(self._get_valid_input(
             prompt="Enter duration in minutes: ",
             validator=lambda x: x.replace('.', '', 1).isdigit(),
