@@ -27,7 +27,7 @@ class Config:
             if not self.api_key or not self.api_secret:
                 raise ValueError("API credentials not found in .env file.")
 
-            self.base_url = "https://testnet.binancefuture.com"
+            self.base_url = "https://testnet.binance.vision/api"
             self.timeout = 100
 
         except Exception as e:

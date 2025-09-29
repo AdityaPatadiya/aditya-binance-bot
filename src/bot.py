@@ -22,7 +22,7 @@ class TradingBot:
                 testnet=True
             )
 
-            self.client.FUTURES_URL = creds['base_url']
+            # self.client.FUTURES_URL = creds['base_url']
             logger.debug(f"API endpoint: {self.client.FUTURES_URL}")
 
             self._validate_connection()

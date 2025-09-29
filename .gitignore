@@ -2,3 +2,4 @@ venv
 __pycache__
 .env
 aditya_binance_bot.zip
+test_api.py
