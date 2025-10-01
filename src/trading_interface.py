@@ -1,5 +1,6 @@
 import sys
 import logging
+from datetime import datetime
 from typing import Callable, TypeVar
 from bot import TradingBot
 from logger import logger
@@ -53,7 +54,7 @@ class TradingInterface:
     def _display_header(self):
         """Display application header"""
         print("┌────────────────────────────────────────────┐")
-        print("│        BINANCE FUTURES TRADING BOT         │")
+        print("│        BINANCE SPOT TRADING BOT            │")
         print("├────────────────────────────────────────────┤")
         print("│ 1. Place New Order                         │")
         print("│ 2. Check Account Balance                   │")
@@ -139,14 +140,14 @@ class TradingInterface:
 
 
         print("\n┌─────────────── ORDER SUMMARY ─────────────────┐")
-        print(f"│ Symbol: {symbol:>30}        │")
-        print(f"│ Type: {order_type:>31}      │")
-        print(f"│ Side: {side:>32}            │")
-        print(f"│ Quantity: {quantity:>26.4f}    │")
+        print(f"│ Symbol: {symbol:>30}                           │")
+        print(f"│ Type: {order_type:>31}                         │")
+        print(f"│ Side: {side:>32}                               │")
+        print(f"│ Quantity: {quantity:>26.4f}                    │")
 
         if order_type == "TWAP":
             print(f"| {'Duration Min':<15}: {params['duration_min']:>18.2f}  |")
-            print(f"| {'Slices':<15}: {params['slices']:>18}  |")
+            print(f"| {'Slices':<15}: {params['slices']:>18}     |")
         for k, v in params.items():
             display_name = k.replace('_', ' ').title()
             if k == "price":
@@ -155,8 +156,8 @@ class TradingInterface:
                 display_name = "Stop Trigger Price"
             elif k == "stop_limit_price":
                 display_name = "Stop Limit Price"
-            print(f"| {display_name:<15}: {v:>18.2f}  |")
-        print("└─────────────────────────────────────────────┘")
+            print(f"| {display_name:<15}: {v:>18.2f}             |")
+        print("└─────────────────────────────────────────────────┘")
 
         if self._get_yes_no("Confirm order placement? (y/n): "):
             success, response = self.bot.place_order(
@@ -178,34 +179,37 @@ class TradingInterface:
                         logging.info(f"Slice IDs: {', '.join(order_ids)}")
                     else:
                         print(f"\nUnexpected TWAP response: {response}")
-                elif order_type == "OCO":
-                    order_ids = [str(r.get('orderID', 'N/A')) for r in response]
-                    print(f"\nOCO order placed successfully! Order IDs: {', '.join(order_ids)}")
 
-                    print("\nOrder Details:")
-                    for i, order in enumerate(response):
-                        order_type_desc = "Take-Profit Limit" if i == 0 else "Stop-Loss"
-                        print(f"{order_type_desc} Order: {order_ids[i]}")
-                elif order_type == "MARKET" or order_type == "LIMIT" or order_type == "STOP_LIMIT":
+                elif order_type == "OCO":
+                    if isinstance(response, dict) and 'orderReports' in response:
+                        order_resports = response['orderReports']
+                        order_ids = [str(r.get['orderId', 'N/A']) for r in order_resports]
+                        
+                        print(f"\nOCO order placed successfully! Order IDs: {','.join(order_ids)}")
+                        print(f"\nOrder Details:")
+                        
+                        for i, order in enumerate(order_resports):
+                            order_type_desc = "Limit Order" if order['type'] == 'LIMIT' else "Stop-Limit Order"
+                            print(f"{order_type_desc}: {order_ids[i]}")
+                    else:
+                        print(f"\nOCO order placed successfully! Response: {response}")
+
+                elif order_type ["MARKET", "LIMIT", "STOP_LIMIT"]:
                     logger.info("Order Placed Successfully!")
                     logger.info(f"Order ID: {response.get('orderId')}")
-
-            if isinstance(response, dict):
-                order_id = response.get('orderID', 'N/A')
-                print(f"\nOrder placed successfully! ID: {order_id}")
-            else:
-                order_id = str(response)
-
+                
                 if order_type == "MARKET" and isinstance(response, dict) and 'fills' in response:
                     print("\nExecution Details:")
                     for fill in response['fills']:
                         print(f"- Price: {fill['price']} | Qty: {fill['qty']}")
+            else:
+                print(f"\nOrder failed: {response}")
 
     def _market_order_flow(self):
         return {}
 
     def _limit_order_price(self, symbol):
-        current_price = float(self.bot.client.futures_symbol_ticker(symbol=symbol)['price'])
+        current_price = float(self.bot.client.get_symbol_ticker(symbol=symbol)['price'])
         print(f"Current market price: {current_price:.2f}")
 
         price = float(self._get_valid_input(
@@ -216,7 +220,7 @@ class TradingInterface:
         return {"price": price}
 
     def _stop_limit_order_flow(self, symbol):
-        current_price = float(self.bot.client.futures_symbol_ticker(symbol=symbol)['price'])
+        current_price = float(self.bot.client.get_symbol_ticker(symbol=symbol)['price'])
         print(f"Current market price: {current_price:.2f}")
 
         stop_price = float(self._get_valid_input(
@@ -234,7 +238,7 @@ class TradingInterface:
         return {"stop_price": stop_price, "price": limit_price}
 
     def _oco_order_flow(self, symbol):
-        current_price = float(self.bot.client.futures_symbol_ticker(symbol=symbol)['price'])
+        current_price = float(self.bot.client.get_symbol_ticker(symbol=symbol)['price'])
         print(f"Current market price: {current_price:.2f}")
 
         limit_price = float(self._get_valid_input(
@@ -303,10 +307,10 @@ class TradingInterface:
         try:
             balance = self.bot.get_account_balance()
 
-            print(f"\n{'Asset':<8} {'Balance':>12} {'Available':>12} {'Margin':>12}")
+            print(f"\n{'Asset':<8} {'Free':>12} {'Locked':>12} {'Total':>12}")
             print("-" * 50)
             for asset, data in balance.items():
-                print(f"{asset:<8} {data['balance']:>12.4f} {data['available']:>12.4f} {data['margin']:>12.4f}")
+                print(f"{asset:<8} {data['free']:>12.4f} {data['locked']:>12.4f} {data['total']:>12.4f}")
 
             logger.info(f"Balance checked: {balance}")
         except Exception as e:
@@ -322,12 +326,12 @@ class TradingInterface:
                 print("\nNo open orders found")
                 return
 
-            print(f"\n{'ID':<12} {'Symbol':<8} {'Side':<6} {'Type':<10} {'Qty':<10} {'Price':<10} {'Stop Price':<10}")
+            print(f"\n{'ID':<12} {'Symbol':<8} {'Side':<6} {'Type':<15} {'Qty':<10} {'Price':<10}")
             print("-" * 70)
             for order in orders[:10]:  # Show first 10 orders
                 print(f"{order['orderId']:<12} {order['symbol']:<8} {order['side']:<6} "
                       f"{order['type']:<10} {order['origQty']:<10.4f} "
-                      f"{order['price']:<10.2f} {order['stopPrice']:<10.2f}")
+                      f"{order['price']:<10.2f}")
 
             logger.info(f"Viewed {len(orders)} open orders")
         except Exception as e:
@@ -352,17 +356,19 @@ class TradingInterface:
                 print(f"\nNo trades found for {symbol}")
                 return
             
-            print(f"\n{'Time':<25} {'Side': <6} {'QTY': <10} {'PnL': <10}")
+            print(f"\n{'Time':<25} {'Side': <6} {'QTY': <10} {'Price': <10} {'Commission':<12}")
             print("-" * 70)
             for trade in trades:
-                print(f"{trade['time']:<25} {trade['side']:<6} "
+                time_str = datetime.fromtimestamp(trade['time']/1000).strftime('%Y-%m-%d %H:%M:%S')
+
+                print(f"{time_str:<20} {trade['side']:<6} "
                       f"{trade['qty']:<10.4f} {trade['price']:10.2f} "
-                      f"{trade['realizedPnl']:<10.4f}")
+                      f"{trade['commission']:<12}")
             logger.info(f"Viewed trade history for {symbol}")
         except Exception as e:
             print(f"\nError fetching trade history: {str(e)}")
             logger.error(f"Trade history failed: {str(e)}")
-    
+
     def _cancel_order_flow(self):
         """Cancel an open order"""
         print("\n------------CANCEL ORDER----------------------")

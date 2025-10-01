@@ -124,3 +124,273 @@
 2025-09-29 15:48:23 | trading_bot | INFO     | Trading bot initialized successfully
 2025-09-29 15:48:23 | trading_bot | INFO     | Trading interface initialized
 2025-09-29 15:48:29 | trading_bot | INFO     | Shutting down trading bot
+2025-09-29 17:32:28 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-09-29 17:32:28 | trading_bot | INFO     | Starting trading interface
+2025-09-29 17:32:28 | trading_bot | INFO     | Configuration loaded
+2025-09-29 17:32:29 | trading_bot | DEBUG    | API endpoint: https://testnet.binancefuture.com
+2025-09-29 17:32:29 | trading_bot | DEBUG    | API ping response: {}
+2025-09-29 17:32:29 | trading_bot | INFO     | Account balance: 0.00000000 USDT | Available: 0.00000000 USDT
+2025-09-29 17:32:29 | trading_bot | INFO     | API connection validated
+2025-09-29 17:32:29 | trading_bot | INFO     | Trading bot initialized successfully
+2025-09-29 17:32:29 | trading_bot | INFO     | Trading interface initialized
+2025-09-29 17:32:44 | trading_bot | INFO     | Retrieved balances for 0 assets
+2025-09-29 17:32:44 | trading_bot | INFO     | Balance checked: {}
+2025-09-29 17:33:25 | trading_bot | INFO     | Retrieved 0 open orders
+2025-09-29 17:33:37 | trading_bot | DEBUG    | Loaded 601 valid symbols
+2025-09-29 17:33:38 | trading_bot | INFO     | Retrieved 0 trades for BTCUSDT
+2025-09-29 17:35:33 | trading_bot | INFO     | Placing MARKET order: BUY 0.01 BTCUSDT
+2025-09-29 17:35:34 | trading_bot | ERROR    | Market order failed: APIError(code=-1000): An unknown error occurred while processing the request.
+2025-09-29 17:35:34 | trading_bot | ERROR    | API Error (code 500): An unknown error occurred while processing the request.
+2025-09-29 17:41:35 | trading_bot | INFO     | Shutting down trading bot
+2025-09-29 17:41:38 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-09-29 17:41:38 | trading_bot | INFO     | Starting trading interface
+2025-09-29 17:41:38 | trading_bot | INFO     | Configuration loaded
+2025-09-29 17:41:38 | trading_bot | DEBUG    | API endpoint: https://testnet.binancefuture.com
+2025-09-29 17:41:38 | trading_bot | DEBUG    | API ping response: {}
+2025-09-29 17:41:38 | trading_bot | INFO     | Account balance: 0.00000000 USDT | Available: 0.00000000 USDT
+2025-09-29 17:41:38 | trading_bot | INFO     | API connection validated
+2025-09-29 17:41:38 | trading_bot | INFO     | Trading bot initialized successfully
+2025-09-29 17:41:38 | trading_bot | INFO     | Trading interface initialized
+2025-09-29 17:41:42 | trading_bot | DEBUG    | Loaded 601 valid symbols
+2025-09-29 17:41:52 | trading_bot | INFO     | Placing MARKET order: BUY 0.01 BTCUSDT
+2025-09-29 17:41:52 | trading_bot | ERROR    | Market order failed: APIError(code=-1000): An unknown error occurred while processing the request.
+2025-09-29 17:41:52 | trading_bot | ERROR    | API Error (code 500): An unknown error occurred while processing the request.
+2025-09-29 17:48:06 | trading_bot | INFO     | Shutting down trading bot
+2025-09-29 18:32:38 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-09-29 18:32:38 | trading_bot | INFO     | Starting trading interface
+2025-09-29 18:32:38 | trading_bot | INFO     | Configuration loaded
+2025-09-29 18:32:39 | trading_bot | DEBUG    | API endpoint: https://testnet.binancefuture.com
+2025-09-29 18:32:39 | trading_bot | DEBUG    | API ping response: {}
+2025-09-29 18:32:39 | trading_bot | INFO     | Account balance: 0.00000000 USDT | Available: 0.00000000 USDT
+2025-09-29 18:32:39 | trading_bot | INFO     | API connection validated
+2025-09-29 18:32:39 | trading_bot | INFO     | Trading bot initialized successfully
+2025-09-29 18:32:39 | trading_bot | INFO     | Trading interface initialized
+2025-09-29 18:32:44 | trading_bot | DEBUG    | Loaded 601 valid symbols
+2025-09-29 18:32:55 | trading_bot | INFO     | Shutting down trading bot
+2025-10-01 09:35:05 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 09:35:05 | trading_bot | INFO     | Starting trading interface
+2025-10-01 09:35:05 | trading_bot | INFO     | Configuration loaded
+2025-10-01 09:35:06 | trading_bot | DEBUG    | API endpoint: https://testnet.binancefuture.com
+2025-10-01 09:35:07 | trading_bot | DEBUG    | API ping response: {}
+2025-10-01 09:35:07 | trading_bot | INFO     | Account balance: 0.00000000 USDT | Available: 0.00000000 USDT
+2025-10-01 09:35:07 | trading_bot | INFO     | API connection validated
+2025-10-01 09:35:07 | trading_bot | INFO     | Trading bot initialized successfully
+2025-10-01 09:35:07 | trading_bot | INFO     | Trading interface initialized
+2025-10-01 09:35:21 | trading_bot | INFO     | Retrieved balances for 0 assets
+2025-10-01 09:35:21 | trading_bot | INFO     | Balance checked: {}
+2025-10-01 09:35:26 | trading_bot | INFO     | Shutting down trading bot
+2025-10-01 09:48:11 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 09:48:11 | trading_bot | INFO     | Starting trading interface
+2025-10-01 09:48:11 | trading_bot | INFO     | Configuration loaded
+2025-10-01 09:48:11 | trading_bot | INFO     | Trading bot initialized successfully
+2025-10-01 09:48:12 | trading_bot | DEBUG    | API connection is successfully.
+2025-10-01 09:48:12 | trading_bot | ERROR    | Connection validation failed: 'balance'
+2025-10-01 09:48:12 | trading_bot | CRITICAL | Initialized failed: 'balance'
+2025-10-01 09:48:12 | trading_bot | CRITICAL | Application crashed: 'balance'
+2025-10-01 09:53:36 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 09:53:36 | trading_bot | INFO     | Starting trading interface
+2025-10-01 09:53:36 | trading_bot | INFO     | Configuration loaded
+2025-10-01 09:53:37 | trading_bot | INFO     | Trading bot initialized successfully
+2025-10-01 09:53:37 | trading_bot | DEBUG    | API connection is successfully.
+2025-10-01 09:53:37 | trading_bot | INFO     | Account balance: 10000.00000000 USDT free | locked: 0.00000000 USDT
+2025-10-01 09:53:37 | trading_bot | INFO     | API connection validated
+2025-10-01 09:53:37 | trading_bot | INFO     | Trading interface initialized
+2025-10-01 09:54:02 | trading_bot | DEBUG    | Loaded 1512 valid symbols
+2025-10-01 09:54:10 | trading_bot | INFO     | Placing MARKET order: BUY 0.01 BTCUSDT
+2025-10-01 09:54:11 | trading_bot | INFO     | Order Placed Successfully!
+2025-10-01 09:54:11 | trading_bot | INFO     | Order ID: 3894626
+2025-10-01 09:54:28 | trading_bot | INFO     | Shutting down trading bot
+2025-10-01 10:08:08 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 10:08:08 | trading_bot | INFO     | Starting trading interface
+2025-10-01 10:08:08 | trading_bot | INFO     | Configuration loaded
+2025-10-01 10:08:09 | trading_bot | INFO     | Trading bot initialized successfully
+2025-10-01 10:08:09 | trading_bot | DEBUG    | API connection is successfully.
+2025-10-01 10:08:09 | trading_bot | INFO     | Account balance: 8855.80150000 USDT free | locked: 0.00000000 USDT
+2025-10-01 10:08:09 | trading_bot | INFO     | API connection validated
+2025-10-01 10:08:09 | trading_bot | INFO     | Trading interface initialized
+2025-10-01 10:08:19 | trading_bot | DEBUG    | Loaded 1512 valid symbols
+2025-10-01 10:08:19 | trading_bot | ERROR    | Trade history error: 401 Invalid API-key, IP, or permissions for action, request ip: 43.241.146.187
+2025-10-01 10:08:19 | trading_bot | ERROR    | Trade history failed: Failed to get trade history: Invalid API-key, IP, or permissions for action, request ip: 43.241.146.187
+2025-10-01 10:30:09 | trading_bot | ERROR    | Order check failed: 401 Invalid API-key, IP, or permissions for action
+2025-10-01 10:30:09 | trading_bot | ERROR    | Open orders check failed: Failed to get orders: Invalid API-key, IP, or permissions for action
+2025-10-01 10:30:20 | trading_bot | ERROR    | Balance check failed: 401 Invalid API-key, IP, or permissions for action
+2025-10-01 10:30:20 | trading_bot | ERROR    | Balance check failed: Failed to get balance Invalid API-key, IP, or permissions for action
+2025-10-01 10:32:17 | trading_bot | ERROR    | Order check failed: 401 Invalid API-key, IP, or permissions for action
+2025-10-01 10:32:17 | trading_bot | ERROR    | Open orders check failed: Failed to get orders: Invalid API-key, IP, or permissions for action
+2025-10-01 10:32:22 | trading_bot | ERROR    | Trade history error: 401 Invalid API-key, IP, or permissions for action, request ip: 43.241.146.187
+2025-10-01 10:32:22 | trading_bot | ERROR    | Trade history failed: Failed to get trade history: Invalid API-key, IP, or permissions for action, request ip: 43.241.146.187
+2025-10-01 10:32:34 | trading_bot | ERROR    | Cancel failed: 401 Invalid API-key, IP, or permissions for action
+2025-10-01 10:32:52 | trading_bot | INFO     | Shutting down trading bot
+2025-10-01 11:26:59 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 11:26:59 | trading_bot | INFO     | Starting trading interface
+2025-10-01 11:26:59 | trading_bot | INFO     | Configuration loaded
+2025-10-01 11:27:00 | trading_bot | INFO     | Trading bot initialized successfully
+2025-10-01 11:27:00 | trading_bot | DEBUG    | API connection is successfully.
+2025-10-01 11:27:00 | trading_bot | INFO     | Account balance: 8855.80150000 USDT free | locked: 0.00000000 USDT
+2025-10-01 11:27:00 | trading_bot | INFO     | API connection validated
+2025-10-01 11:27:00 | trading_bot | INFO     | Trading interface initialized
+2025-10-01 11:27:02 | trading_bot | ERROR    | Balance check failed: 401 Invalid API-key, IP, or permissions for action
+2025-10-01 11:27:02 | trading_bot | ERROR    | Balance check failed: Failed to get balance Invalid API-key, IP, or permissions for action
+2025-10-01 11:28:09 | trading_bot | ERROR    | Order check failed: 401 Invalid API-key, IP, or permissions for action
+2025-10-01 11:28:09 | trading_bot | ERROR    | Open orders check failed: Failed to get orders: Invalid API-key, IP, or permissions for action
+2025-10-01 11:28:19 | trading_bot | DEBUG    | Loaded 1512 valid symbols
+2025-10-01 11:28:20 | trading_bot | ERROR    | Trade history error: 401 Invalid API-key, IP, or permissions for action, request ip: 43.241.146.187
+2025-10-01 11:28:20 | trading_bot | ERROR    | Trade history failed: Failed to get trade history: Invalid API-key, IP, or permissions for action, request ip: 43.241.146.187
+2025-10-01 11:28:30 | trading_bot | ERROR    | Balance check failed: 401 Invalid API-key, IP, or permissions for action
+2025-10-01 11:28:30 | trading_bot | ERROR    | Balance check failed: Failed to get balance Invalid API-key, IP, or permissions for action
+2025-10-01 11:32:29 | trading_bot | INFO     | Shutting down trading bot
+2025-10-01 11:32:31 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 11:32:31 | trading_bot | INFO     | Starting trading interface
+2025-10-01 11:32:31 | trading_bot | INFO     | Configuration loaded
+2025-10-01 11:32:32 | trading_bot | INFO     | Trading bot initialized successfully
+2025-10-01 11:32:32 | trading_bot | DEBUG    | API connection is successfully.
+2025-10-01 11:32:32 | trading_bot | INFO     | Account balance: 8855.80150000 USDT free | locked: 0.00000000 USDT
+2025-10-01 11:32:32 | trading_bot | INFO     | API connection validated
+2025-10-01 11:32:32 | trading_bot | INFO     | Trading interface initialized
+2025-10-01 11:32:35 | trading_bot | ERROR    | Balance check failed: 401 Invalid API-key, IP, or permissions for action
+2025-10-01 11:32:35 | trading_bot | ERROR    | Balance check failed: Failed to get balance Invalid API-key, IP, or permissions for action
+2025-10-01 11:32:38 | trading_bot | ERROR    | Order check failed: 401 Invalid API-key, IP, or permissions for action
+2025-10-01 11:32:38 | trading_bot | ERROR    | Open orders check failed: Failed to get orders: Invalid API-key, IP, or permissions for action
+2025-10-01 11:32:43 | trading_bot | DEBUG    | Loaded 1512 valid symbols
+2025-10-01 11:32:43 | trading_bot | INFO     | Retrieved 1 trades for BTCUSDT
+2025-10-01 11:32:43 | trading_bot | ERROR    | Trade history failed: ('commission', '0')
+2025-10-01 11:33:11 | trading_bot | INFO     | Shutting down trading bot
+2025-10-01 11:33:13 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 11:33:13 | trading_bot | INFO     | Starting trading interface
+2025-10-01 11:33:13 | trading_bot | INFO     | Configuration loaded
+2025-10-01 11:33:13 | trading_bot | INFO     | Trading bot initialized successfully
+2025-10-01 11:33:14 | trading_bot | DEBUG    | API connection is successfully.
+2025-10-01 11:33:14 | trading_bot | INFO     | Account balance: 8855.80150000 USDT free | locked: 0.00000000 USDT
+2025-10-01 11:33:14 | trading_bot | INFO     | API connection validated
+2025-10-01 11:33:14 | trading_bot | INFO     | Trading interface initialized
+2025-10-01 11:33:18 | trading_bot | DEBUG    | Loaded 1512 valid symbols
+2025-10-01 11:33:18 | trading_bot | INFO     | Retrieved 1 trades for BTCUSDT
+2025-10-01 11:33:18 | trading_bot | ERROR    | Trade history failed: ('commission', '0')
+2025-10-01 11:33:54 | trading_bot | ERROR    | Order check failed: 401 Invalid API-key, IP, or permissions for action
+2025-10-01 11:33:54 | trading_bot | ERROR    | Open orders check failed: Failed to get orders: Invalid API-key, IP, or permissions for action
+2025-10-01 11:34:14 | trading_bot | ERROR    | Balance check failed: 401 Invalid API-key, IP, or permissions for action
+2025-10-01 11:34:14 | trading_bot | ERROR    | Balance check failed: Failed to get balance Invalid API-key, IP, or permissions for action
+2025-10-01 12:05:43 | trading_bot | INFO     | Shutting down trading bot
+2025-10-01 12:05:45 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 12:05:45 | trading_bot | INFO     | Starting trading interface
+2025-10-01 12:05:45 | trading_bot | INFO     | Configuration loaded
+2025-10-01 12:05:45 | trading_bot | CRITICAL | Initialized failed: 'Config' object has no attribute 'base_url'
+2025-10-01 12:05:45 | trading_bot | CRITICAL | Application crashed: 'Config' object has no attribute 'base_url'
+2025-10-01 12:05:52 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 12:05:52 | trading_bot | INFO     | Starting trading interface
+2025-10-01 12:05:52 | trading_bot | INFO     | Configuration loaded
+2025-10-01 12:05:53 | trading_bot | INFO     | Trading bot initialized successfully
+2025-10-01 12:05:54 | trading_bot | DEBUG    | API connection is successfully.
+2025-10-01 12:05:54 | trading_bot | INFO     | Account balance: 8855.80150000 USDT free | locked: 0.00000000 USDT
+2025-10-01 12:05:54 | trading_bot | INFO     | API connection validated
+2025-10-01 12:05:54 | trading_bot | INFO     | Trading interface initialized
+2025-10-01 12:05:55 | trading_bot | INFO     | Retrieved balances for 427 assets
+2025-10-01 12:05:55 | trading_bot | INFO     | Balance checked: {'ETH': {'free': 1.0, 'locked': 0.0, 'total': 1.0}, 'BTC': {'free': 1.01, 'locked': 0.0, 'total': 1.01}, 'LTC': {'free': 4.0, 'locked': 0.0, 'total': 4.0}, 'BNB': {'free': 1.0, 'locked': 0.0, 'total': 1.0}, 'USDT': {'free': 8855.8015, 'locked': 0.0, 'total': 8855.8015}, 'TRX': {'free': 1483.0, 'locked': 0.0, 'total': 1483.0}, 'XRP': {'free': 175.0, 'locked': 0.0, 'total': 175.0}, 'NEO': {'free': 76.0, 'locked': 0.0, 'total': 76.0}, 'QTUM': {'free': 183.0, 'locked': 0.0, 'total': 183.0}, 'GAS': {'free': 155.0, 'locked': 0.0, 'total': 155.0}, 'LRC': {'free': 4956.0, 'locked': 0.0, 'total': 4956.0}, 'ZRX': {'free': 1831.0, 'locked': 0.0, 'total': 1831.0}, 'KNC': {'free': 1349.0, 'locked': 0.0, 'total': 1349.0}, 'IOTA': {'free': 2694.0, 'locked': 0.0, 'total': 2694.0}, 'LINK': {'free': 21.0, 'locked': 0.0, 'total': 21.0}, 'XVG': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'MTL': {'free': 712.0, 'locked': 0.0, 'total': 712.0}, 'ETC': {'free': 24.0, 'locked': 0.0, 'total': 24.0}, 'ZEC': {'free': 12.0, 'locked': 0.0, 'total': 12.0}, 'DASH': {'free': 20.0, 'locked': 0.0, 'total': 20.0}, 'REQ': {'free': 4055.0, 'locked': 0.0, 'total': 4055.0}, 'POWR': {'free': 3155.0, 'locked': 0.0, 'total': 3155.0}, 'ENJ': {'free': 7437.0, 'locked': 0.0, 'total': 7437.0}, 'STORJ': {'free': 1972.0, 'locked': 0.0, 'total': 1972.0}, 'BAT': {'free': 3285.0, 'locked': 0.0, 'total': 3285.0}, 'LSK': {'free': 1370.0, 'locked': 0.0, 'total': 1370.0}, 'MANA': {'free': 1567.0, 'locked': 0.0, 'total': 1567.0}, 'ADX': {'free': 3988.0, 'locked': 0.0, 'total': 3988.0}, 'ADA': {'free': 605.0, 'locked': 0.0, 'total': 605.0}, 'XLM': {'free': 1378.0, 'locked': 0.0, 'total': 1378.0}, 'ICX': {'free': 3914.0, 'locked': 0.0, 'total': 3914.0}, 'RLC': {'free': 387.0, 'locked': 0.0, 'total': 387.0}, 'PIVX': {'free': 3752.0, 'locked': 0.0, 'total': 3752.0}, 'STEEM': {'free': 3840.0, 'locked': 0.0, 'total': 3840.0}, 'ZIL': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ONT': {'free': 3664.0, 'locked': 0.0, 'total': 3664.0}, 'WAN': {'free': 4780.0, 'locked': 0.0, 'total': 4780.0}, 'SYS': {'free': 12723.0, 'locked': 0.0, 'total': 12723.0}, 'TUSD': {'free': 10000.0, 'locked': 0.0, 'total': 10000.0}, 'ZEN': {'free': 70.0, 'locked': 0.0, 'total': 70.0}, 'THETA': {'free': 636.0, 'locked': 0.0, 'total': 636.0}, 'IOTX': {'free': 18375.0, 'locked': 0.0, 'total': 18375.0}, 'DATA': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'SC': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'DENT': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ARDR': {'free': 6029.0, 'locked': 0.0, 'total': 6029.0}, 'HOT': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'VET': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'RVN': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'USDC': {'free': 10000.0, 'locked': 0.0, 'total': 10000.0}, 'ONG': {'free': 3049.0, 'locked': 0.0, 'total': 3049.0}, 'FET': {'free': 822.0, 'locked': 0.0, 'total': 822.0}, 'IOST': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'CELR': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ATOM': {'free': 112.0, 'locked': 0.0, 'total': 112.0}, 'PHB': {'free': 918.0, 'locked': 0.0, 'total': 918.0}, 'TFUEL': {'free': 14736.0, 'locked': 0.0, 'total': 14736.0}, 'ONE': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ALGO': {'free': 2154.0, 'locked': 0.0, 'total': 2154.0}, 'DOGE': {'free': 2311.0, 'locked': 0.0, 'total': 2311.0}, 'DUSK': {'free': 7987.0, 'locked': 0.0, 'total': 7987.0}, 'ANKR': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'WIN': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'COS': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'FUN': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'CVC': {'free': 5651.0, 'locked': 0.0, 'total': 5651.0}, 'CHZ': {'free': 12663.0, 'locked': 0.0, 'total': 12663.0}, 'BAND': {'free': 689.0, 'locked': 0.0, 'total': 689.0}, 'XTZ': {'free': 697.0, 'locked': 0.0, 'total': 697.0}, 'HBAR': {'free': 2277.0, 'locked': 0.0, 'total': 2277.0}, 'NKN': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'STX': {'free': 805.0, 'locked': 0.0, 'total': 805.0}, 'KAVA': {'free': 1348.0, 'locked': 0.0, 'total': 1348.0}, 'ARPA': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'BCH': {'free': 1.0, 'locked': 0.0, 'total': 1.0}, 'FTT': {'free': 639.0, 'locked': 0.0, 'total': 639.0}, 'TRY': {'free': 18466.0, 'locked': 0.0, 'total': 18466.0}, 'EUR': {'free': 428.0, 'locked': 0.0, 'total': 428.0}, 'OGN': {'free': 8090.0, 'locked': 0.0, 'total': 8090.0}, 'BNT': {'free': 673.0, 'locked': 0.0, 'total': 673.0}, 'MBL': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'COTI': {'free': 10160.0, 'locked': 0.0, 'total': 10160.0}, 'ZAR': {'free': 18466.0, 'locked': 0.0, 'total': 18466.0}, 'SOL': {'free': 2.0, 'locked': 0.0, 'total': 2.0}, 'CTSI': {'free': 6607.0, 'locked': 0.0, 'total': 6607.0}, 'HIVE': {'free': 2497.0, 'locked': 0.0, 'total': 2497.0}, 'CHR': {'free': 5104.0, 'locked': 0.0, 'total': 5104.0}, 'MDT': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'UAH': {'free': 18466.0, 'locked': 0.0, 'total': 18466.0}, 'COMP': {'free': 11.0, 'locked': 0.0, 'total': 11.0}, 'SXP': {'free': 2925.0, 'locked': 0.0, 'total': 2925.0}, 'SNX': {'free': 744.0, 'locked': 0.0, 'total': 744.0}, 'VTHO': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'DGB': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'MKR': {'free': 1.0, 'locked': 0.0, 'total': 1.0}, 'RUNE': {'free': 412.0, 'locked': 0.0, 'total': 412.0}, 'DCR': {'free': 30.0, 'locked': 0.0, 'total': 30.0}, 'AVA': {'free': 939.0, 'locked': 0.0, 'total': 939.0}, 'YFI': {'free': 1.0, 'locked': 0.0, 'total': 1.0}, 'DAI': {'free': 10000.0, 'locked': 0.0, 'total': 10000.0}, 'JST': {'free': 14612.0, 'locked': 0.0, 'total': 14612.0}, 'CRV': {'free': 661.0, 'locked': 0.0, 'total': 661.0}, 'SAND': {'free': 1785.0, 'locked': 0.0, 'total': 1785.0}, 'NMR': {'free': 37.0, 'locked': 0.0, 'total': 37.0}, 'DOT': {'free': 130.0, 'locked': 0.0, 'total': 130.0}, 'LUNA': {'free': 3395.0, 'locked': 0.0, 'total': 3395.0}, 'RSR': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'PAXG': {'free': 1.0, 'locked': 0.0, 'total': 1.0}, 'TRB': {'free': 14.0, 'locked': 0.0, 'total': 14.0}, 'WBTC': {'free': 1.0, 'locked': 0.0, 'total': 1.0}, 'SUSHI': {'free': 657.0, 'locked': 0.0, 'total': 657.0}, 'KSM': {'free': 33.0, 'locked': 0.0, 'total': 33.0}, 'EGLD': {'free': 35.0, 'locked': 0.0, 'total': 35.0}, 'DIA': {'free': 680.0, 'locked': 0.0, 'total': 680.0}, 'FIO': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'UMA': {'free': 369.0, 'locked': 0.0, 'total': 369.0}, 'BEL': {'free': 2097.0, 'locked': 0.0, 'total': 2097.0}, 'UNI': {'free': 52.0, 'locked': 0.0, 'total': 52.0}, 'OXT': {'free': 9387.0, 'locked': 0.0, 'total': 9387.0}, 'SUN': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'AVAX': {'free': 20.0, 'locked': 0.0, 'total': 20.0}, 'FLM': {'free': 18115.0, 'locked': 0.0, 'total': 18115.0}, 'SCRT': {'free': 2897.0, 'locked': 0.0, 'total': 2897.0}, 'CAKE': {'free': 209.0, 'locked': 0.0, 'total': 209.0}, 'UTK': {'free': 16972.0, 'locked': 0.0, 'total': 16972.0}, 'XVS': {'free': 81.0, 'locked': 0.0, 'total': 81.0}, 'BRL': {'free': 97.0, 'locked': 0.0, 'total': 97.0}, 'AAVE': {'free': 1.0, 'locked': 0.0, 'total': 1.0}, 'NEAR': {'free': 207.0, 'locked': 0.0, 'total': 207.0}, 'FIL': {'free': 215.0, 'locked': 0.0, 'total': 215.0}, 'INJ': {'free': 39.0, 'locked': 0.0, 'total': 39.0}, 'AUDIO': {'free': 8171.0, 'locked': 0.0, 'total': 8171.0}, 'CTK': {'free': 1526.0, 'locked': 0.0, 'total': 1526.0}, 'AXS': {'free': 211.0, 'locked': 0.0, 'total': 211.0}, 'SLP': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'STRAX': {'free': 11664.0, 'locked': 0.0, 'total': 11664.0}, 'ROSE': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'SKL': {'free': 16981.0, 'locked': 0.0, 'total': 16981.0}, 'GLM': {'free': 2140.0, 'locked': 0.0, 'total': 2140.0}, 'GRT': {'free': 5611.0, 'locked': 0.0, 'total': 5611.0}, 'JUV': {'free': 439.0, 'locked': 0.0, 'total': 439.0}, 'PSG': {'free': 309.0, 'locked': 0.0, 'total': 309.0}, '1INCH': {'free': 2043.0, 'locked': 0.0, 'total': 2043.0}, 'OG': {'free': 36.0, 'locked': 0.0, 'total': 36.0}, 'ATM': {'free': 397.0, 'locked': 0.0, 'total': 397.0}, 'ASR': {'free': 212.0, 'locked': 0.0, 'total': 212.0}, 'CELO': {'free': 1700.0, 'locked': 0.0, 'total': 1700.0}, 'RIF': {'free': 8896.0, 'locked': 0.0, 'total': 8896.0}, 'TRU': {'free': 17182.0, 'locked': 0.0, 'total': 17182.0}, 'CKB': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'TWT': {'free': 688.0, 'locked': 0.0, 'total': 688.0}, 'SFP': {'free': 1087.0, 'locked': 0.0, 'total': 1087.0}, 'DODO': {'free': 11261.0, 'locked': 0.0, 'total': 11261.0}, 'ACM': {'free': 543.0, 'locked': 0.0, 'total': 543.0}, 'AUCTION': {'free': 52.0, 'locked': 0.0, 'total': 52.0}, 'PHA': {'free': 4868.0, 'locked': 0.0, 'total': 4868.0}, 'FIS': {'free': 4757.0, 'locked': 0.0, 'total': 4757.0}, 'OM': {'free': 2422.0, 'locked': 0.0, 'total': 2422.0}, 'POND': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'DEGO': {'free': 395.0, 'locked': 0.0, 'total': 395.0}, 'ALICE': {'free': 1390.0, 'locked': 0.0, 'total': 1390.0}, 'PERP': {'free': 1935.0, 'locked': 0.0, 'total': 1935.0}, 'SUPER': {'free': 839.0, 'locked': 0.0, 'total': 839.0}, 'CFX': {'free': 2906.0, 'locked': 0.0, 'total': 2906.0}, 'TKO': {'free': 2662.0, 'locked': 0.0, 'total': 2662.0}, 'PUNDIX': {'free': 1612.0, 'locked': 0.0, 'total': 1612.0}, 'TLM': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'BAR': {'free': 440.0, 'locked': 0.0, 'total': 440.0}, 'FORTH': {'free': 182.0, 'locked': 0.0, 'total': 182.0}, 'BAKE': {'free': 12163.0, 'locked': 0.0, 'total': 12163.0}, 'SHIB': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ICP': {'free': 104.0, 'locked': 0.0, 'total': 104.0}, 'AR': {'free': 76.0, 'locked': 0.0, 'total': 76.0}, 'MASK': {'free': 406.0, 'locked': 0.0, 'total': 406.0}, 'LPT': {'free': 72.0, 'locked': 0.0, 'total': 72.0}, 'ATA': {'free': 11210.0, 'locked': 0.0, 'total': 11210.0}, 'GTC': {'free': 1480.0, 'locked': 0.0, 'total': 1480.0}, 'MLN': {'free': 63.0, 'locked': 0.0, 'total': 63.0}, 'DEXE': {'free': 68.0, 'locked': 0.0, 'total': 68.0}, 'C98': {'free': 10266.0, 'locked': 0.0, 'total': 10266.0}, 'QNT': {'free': 4.0, 'locked': 0.0, 'total': 4.0}, 'FLOW': {'free': 1237.0, 'locked': 0.0, 'total': 1237.0}, 'MINA': {'free': 2786.0, 'locked': 0.0, 'total': 2786.0}, 'RAY': {'free': 150.0, 'locked': 0.0, 'total': 150.0}, 'FARM': {'free': 17.0, 'locked': 0.0, 'total': 17.0}, 'QUICK': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'MBOX': {'free': 8962.0, 'locked': 0.0, 'total': 8962.0}, 'GHST': {'free': 1148.0, 'locked': 0.0, 'total': 1148.0}, 'WAXP': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'GNO': {'free': 3.0, 'locked': 0.0, 'total': 3.0}, 'XEC': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'DYDX': {'free': 844.0, 'locked': 0.0, 'total': 844.0}, 'IDEX': {'free': 17819.0, 'locked': 0.0, 'total': 17819.0}, 'USDP': {'free': 500.0, 'locked': 0.0, 'total': 500.0}, 'GALA': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ILV': {'free': 36.0, 'locked': 0.0, 'total': 36.0}, 'YGG': {'free': 3285.0, 'locked': 0.0, 'total': 3285.0}, 'DF': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'FIDA': {'free': 5860.0, 'locked': 0.0, 'total': 5860.0}, 'AGLD': {'free': 749.0, 'locked': 0.0, 'total': 749.0}, 'RAD': {'free': 743.0, 'locked': 0.0, 'total': 743.0}, 'RARE': {'free': 9189.0, 'locked': 0.0, 'total': 9189.0}, 'SSV': {'free': 55.0, 'locked': 0.0, 'total': 55.0}, 'LAZIO': {'free': 548.0, 'locked': 0.0, 'total': 548.0}, 'CHESS': {'free': 7041.0, 'locked': 0.0, 'total': 7041.0}, 'MOVR': {'free': 86.0, 'locked': 0.0, 'total': 86.0}, 'CITY': {'free': 489.0, 'locked': 0.0, 'total': 489.0}, 'ENS': {'free': 22.0, 'locked': 0.0, 'total': 22.0}, 'QI': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'PORTO': {'free': 514.0, 'locked': 0.0, 'total': 514.0}, 'JASMY': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'AMP': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'PYR': {'free': 485.0, 'locked': 0.0, 'total': 485.0}, 'ALCX': {'free': 52.0, 'locked': 0.0, 'total': 52.0}, 'SANTOS': {'free': 280.0, 'locked': 0.0, 'total': 280.0}, 'BICO': {'free': 5208.0, 'locked': 0.0, 'total': 5208.0}, 'FLUX': {'free': 2525.0, 'locked': 0.0, 'total': 2525.0}, 'FXS': {'free': 187.0, 'locked': 0.0, 'total': 187.0}, 'VOXEL': {'free': 9002.0, 'locked': 0.0, 'total': 9002.0}, 'HIGH': {'free': 981.0, 'locked': 0.0, 'total': 981.0}, 'CVX': {'free': 142.0, 'locked': 0.0, 'total': 142.0}, 'PEOPLE': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'SPELL': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'JOE': {'free': 3127.0, 'locked': 0.0, 'total': 3127.0}, 'ACH': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'IMX': {'free': 964.0, 'locked': 0.0, 'total': 964.0}, 'GLMR': {'free': 7406.0, 'locked': 0.0, 'total': 7406.0}, 'API3': {'free': 510.0, 'locked': 0.0, 'total': 510.0}, 'BTTC': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ACA': {'free': 17138.0, 'locked': 0.0, 'total': 17138.0}, 'XNO': {'free': 576.0, 'locked': 0.0, 'total': 576.0}, 'WOO': {'free': 7418.0, 'locked': 0.0, 'total': 7418.0}, 'ALPINE': {'free': 233.0, 'locked': 0.0, 'total': 233.0}, 'T': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ASTR': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'GMT': {'free': 12142.0, 'locked': 0.0, 'total': 12142.0}, 'KDA': {'free': 1410.0, 'locked': 0.0, 'total': 1410.0}, 'APE': {'free': 871.0, 'locked': 0.0, 'total': 871.0}, 'BIFI': {'free': 2.0, 'locked': 0.0, 'total': 2.0}, 'NEXO': {'free': 393.0, 'locked': 0.0, 'total': 393.0}, 'REI': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'LDO': {'free': 413.0, 'locked': 0.0, 'total': 413.0}, 'OP': {'free': 705.0, 'locked': 0.0, 'total': 705.0}, 'STG': {'free': 3152.0, 'locked': 0.0, 'total': 3152.0}, 'LUNC': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'GMX': {'free': 34.0, 'locked': 0.0, 'total': 34.0}, 'POLYX': {'free': 3919.0, 'locked': 0.0, 'total': 3919.0}, 'APT': {'free': 116.0, 'locked': 0.0, 'total': 116.0}, 'PLN': {'free': 18466.0, 'locked': 0.0, 'total': 18466.0}, 'OSMO': {'free': 3020.0, 'locked': 0.0, 'total': 3020.0}, 'HFT': {'free': 4969.0, 'locked': 0.0, 'total': 4969.0}, 'HOOK': {'free': 4730.0, 'locked': 0.0, 'total': 4730.0}, 'MAGIC': {'free': 2513.0, 'locked': 0.0, 'total': 2513.0}, 'HIFI': {'free': 7629.0, 'locked': 0.0, 'total': 7629.0}, 'RPL': {'free': 76.0, 'locked': 0.0, 'total': 76.0}, 'RON': {'free': 18466.0, 'locked': 0.0, 'total': 18466.0}, 'GNS': {'free': 226.0, 'locked': 0.0, 'total': 226.0}, 'SYN': {'free': 4175.0, 'locked': 0.0, 'total': 4175.0}, 'LQTY': {'free': 614.0, 'locked': 0.0, 'total': 614.0}, 'USTC': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'PROM': {'free': 55.0, 'locked': 0.0, 'total': 55.0}, 'QKC': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ID': {'free': 3177.0, 'locked': 0.0, 'total': 3177.0}, 'ARB': {'free': 1008.0, 'locked': 0.0, 'total': 1008.0}, 'RDNT': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ARS': {'free': 18466.0, 'locked': 0.0, 'total': 18466.0}, 'EDU': {'free': 3837.0, 'locked': 0.0, 'total': 3837.0}, 'SUI': {'free': 148.0, 'locked': 0.0, 'total': 148.0}, 'PEPE': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'FLOKI': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'WBETH': {'free': 1.0, 'locked': 0.0, 'total': 1.0}, 'MAV': {'free': 6327.0, 'locked': 0.0, 'total': 6327.0}, 'PENDLE': {'free': 107.0, 'locked': 0.0, 'total': 107.0}, 'ARKM': {'free': 1057.0, 'locked': 0.0, 'total': 1057.0}, 'WLD': {'free': 562.0, 'locked': 0.0, 'total': 562.0}, 'FDUSD': {'free': 10000.0, 'locked': 0.0, 'total': 10000.0}, 'SEI': {'free': 1726.0, 'locked': 0.0, 'total': 1726.0}, 'CYBER': {'free': 286.0, 'locked': 0.0, 'total': 286.0}, 'ARK': {'free': 1162.0, 'locked': 0.0, 'total': 1162.0}, 'IQ': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'NTRN': {'free': 5245.0, 'locked': 0.0, 'total': 5245.0}, 'TIA': {'free': 311.0, 'locked': 0.0, 'total': 311.0}, 'MEME': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ORDI': {'free': 56.0, 'locked': 0.0, 'total': 56.0}, 'BEAMX': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'VIC': {'free': 2243.0, 'locked': 0.0, 'total': 2243.0}, 'BLUR': {'free': 6594.0, 'locked': 0.0, 'total': 6594.0}, 'VANRY': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'AEUR': {'free': 452.0, 'locked': 0.0, 'total': 452.0}, 'JTO': {'free': 268.0, 'locked': 0.0, 'total': 268.0}, '1000SATS': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'BONK': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ACE': {'free': 999.0, 'locked': 0.0, 'total': 999.0}, 'NFP': {'free': 8044.0, 'locked': 0.0, 'total': 8044.0}, 'AI': {'free': 4176.0, 'locked': 0.0, 'total': 4176.0}, 'XAI': {'free': 10694.0, 'locked': 0.0, 'total': 10694.0}, 'MANTA': {'free': 2508.0, 'locked': 0.0, 'total': 2508.0}, 'ALT': {'free': 15934.0, 'locked': 0.0, 'total': 15934.0}, 'JUP': {'free': 1012.0, 'locked': 0.0, 'total': 1012.0}, 'PYTH': {'free': 3330.0, 'locked': 0.0, 'total': 3330.0}, 'RONIN': {'free': 1042.0, 'locked': 0.0, 'total': 1042.0}, 'DYM': {'free': 2415.0, 'locked': 0.0, 'total': 2415.0}, 'PIXEL': {'free': 17297.0, 'locked': 0.0, 'total': 17297.0}, 'STRK': {'free': 4061.0, 'locked': 0.0, 'total': 4061.0}, 'PORTAL': {'free': 12284.0, 'locked': 0.0, 'total': 12284.0}, 'AXL': {'free': 1658.0, 'locked': 0.0, 'total': 1658.0}, 'WIF': {'free': 617.0, 'locked': 0.0, 'total': 617.0}, 'METIS': {'free': 33.0, 'locked': 0.0, 'total': 33.0}, 'JPY': {'free': 18466.0, 'locked': 0.0, 'total': 18466.0}, 'AEVO': {'free': 5694.0, 'locked': 0.0, 'total': 5694.0}, 'BOME': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'ETHFI': {'free': 435.0, 'locked': 0.0, 'total': 435.0}, 'ENA': {'free': 750.0, 'locked': 0.0, 'total': 750.0}, 'W': {'free': 6511.0, 'locked': 0.0, 'total': 6511.0}, 'TNSR': {'free': 4383.0, 'locked': 0.0, 'total': 4383.0}, 'SAGA': {'free': 2107.0, 'locked': 0.0, 'total': 2107.0}, 'MXN': {'free': 18466.0, 'locked': 0.0, 'total': 18466.0}, 'TAO': {'free': 1.0, 'locked': 0.0, 'total': 1.0}, 'OMNI': {'free': 162.0, 'locked': 0.0, 'total': 162.0}, 'REZ': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'BB': {'free': 3617.0, 'locked': 0.0, 'total': 3617.0}, 'NOT': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'COP': {'free': 18466.0, 'locked': 0.0, 'total': 18466.0}, 'IO': {'free': 967.0, 'locked': 0.0, 'total': 967.0}, 'ZK': {'free': 8886.0, 'locked': 0.0, 'total': 8886.0}, 'LISTA': {'free': 2037.0, 'locked': 0.0, 'total': 2037.0}, 'ZRO': {'free': 272.0, 'locked': 0.0, 'total': 272.0}, 'G': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'BANANA': {'free': 26.0, 'locked': 0.0, 'total': 26.0}, 'RENDER': {'free': 145.0, 'locked': 0.0, 'total': 145.0}, 'TON': {'free': 160.0, 'locked': 0.0, 'total': 160.0}, 'DOGS': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'EURI': {'free': 428.0, 'locked': 0.0, 'total': 428.0}, 'SLF': {'free': 17617.0, 'locked': 0.0, 'total': 17617.0}, 'POL': {'free': 1746.0, 'locked': 0.0, 'total': 1746.0}, 'NEIRO': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'TURBO': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, '1MBABYDOGE': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'CATI': {'free': 5837.0, 'locked': 0.0, 'total': 5837.0}, 'HMSTR': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'EIGEN': {'free': 386.0, 'locked': 0.0, 'total': 386.0}, 'BNSOL': {'free': 2.0, 'locked': 0.0, 'total': 2.0}, 'SCR': {'free': 1517.0, 'locked': 0.0, 'total': 1517.0}, 'LUMIA': {'free': 1635.0, 'locked': 0.0, 'total': 1635.0}, 'KAIA': {'free': 3407.0, 'locked': 0.0, 'total': 3407.0}, 'COW': {'free': 1484.0, 'locked': 0.0, 'total': 1484.0}, 'CETUS': {'free': 5520.0, 'locked': 0.0, 'total': 5520.0}, 'PNUT': {'free': 2431.0, 'locked': 0.0, 'total': 2431.0}, 'ACT': {'free': 14130.0, 'locked': 0.0, 'total': 14130.0}, 'USUAL': {'free': 8578.0, 'locked': 0.0, 'total': 8578.0}, 'THE': {'free': 1499.0, 'locked': 0.0, 'total': 1499.0}, 'ACX': {'free': 3605.0, 'locked': 0.0, 'total': 3605.0}, 'ORCA': {'free': 222.0, 'locked': 0.0, 'total': 222.0}, 'MOVE': {'free': 4312.0, 'locked': 0.0, 'total': 4312.0}, 'ME': {'free': 757.0, 'locked': 0.0, 'total': 757.0}, 'VELODROME': {'free': 9995.0, 'locked': 0.0, 'total': 9995.0}, 'VANA': {'free': 128.0, 'locked': 0.0, 'total': 128.0}, '1000CAT': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'PENGU': {'free': 17250.0, 'locked': 0.0, 'total': 17250.0}, 'BIO': {'free': 3494.0, 'locked': 0.0, 'total': 3494.0}, 'D': {'free': 15780.0, 'locked': 0.0, 'total': 15780.0}, 'AIXBT': {'free': 4784.0, 'locked': 0.0, 'total': 4784.0}, 'CGPT': {'free': 6384.0, 'locked': 0.0, 'total': 6384.0}, 'COOKIE': {'free': 4209.0, 'locked': 0.0, 'total': 4209.0}, 'S': {'free': 1627.0, 'locked': 0.0, 'total': 1627.0}, 'SOLV': {'free': 11815.0, 'locked': 0.0, 'total': 11815.0}, 'TRUMP': {'free': 59.0, 'locked': 0.0, 'total': 59.0}, 'ANIME': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'BERA': {'free': 216.0, 'locked': 0.0, 'total': 216.0}, '1000CHEEMS': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'TST': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'LAYER': {'free': 985.0, 'locked': 0.0, 'total': 985.0}, 'HEI': {'free': 1168.0, 'locked': 0.0, 'total': 1168.0}, 'KAITO': {'free': 503.0, 'locked': 0.0, 'total': 503.0}, 'SHELL': {'free': 4238.0, 'locked': 0.0, 'total': 4238.0}, 'RED': {'free': 780.0, 'locked': 0.0, 'total': 780.0}, 'GPS': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'EPIC': {'free': 245.0, 'locked': 0.0, 'total': 245.0}, 'BMT': {'free': 8025.0, 'locked': 0.0, 'total': 8025.0}, 'FORM': {'free': 133.0, 'locked': 0.0, 'total': 133.0}, 'XUSD': {'free': 500.0, 'locked': 0.0, 'total': 500.0}, 'CZK': {'free': 18466.0, 'locked': 0.0, 'total': 18466.0}, 'NIL': {'free': 1858.0, 'locked': 0.0, 'total': 1858.0}, 'PARTI': {'free': 2319.0, 'locked': 0.0, 'total': 2319.0}, 'MUBARAK': {'free': 18051.0, 'locked': 0.0, 'total': 18051.0}, 'TUT': {'free': 7268.0, 'locked': 0.0, 'total': 7268.0}, 'BROCCOLI714': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'BANANAS31': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'GUN': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'BABY': {'free': 10956.0, 'locked': 0.0, 'total': 10956.0}, 'ONDO': {'free': 539.0, 'locked': 0.0, 'total': 539.0}, 'BIGTIME': {'free': 9735.0, 'locked': 0.0, 'total': 9735.0}, 'VIRTUAL': {'free': 458.0, 'locked': 0.0, 'total': 458.0}, 'KERNEL': {'free': 2694.0, 'locked': 0.0, 'total': 2694.0}, 'WCT': {'free': 1732.0, 'locked': 0.0, 'total': 1732.0}, 'HYPER': {'free': 1705.0, 'locked': 0.0, 'total': 1705.0}, 'INIT': {'free': 1548.0, 'locked': 0.0, 'total': 1548.0}, 'SIGN': {'free': 6808.0, 'locked': 0.0, 'total': 6808.0}, 'STO': {'free': 6304.0, 'locked': 0.0, 'total': 6304.0}, 'SYRUP': {'free': 982.0, 'locked': 0.0, 'total': 982.0}, 'KMNO': {'free': 9075.0, 'locked': 0.0, 'total': 9075.0}, 'SXT': {'free': 6839.0, 'locked': 0.0, 'total': 6839.0}, 'NXPC': {'free': 772.0, 'locked': 0.0, 'total': 772.0}, 'AWE': {'free': 9684.0, 'locked': 0.0, 'total': 9684.0}, 'HAEDAL': {'free': 3761.0, 'locked': 0.0, 'total': 3761.0}, 'USD1': {'free': 500.0, 'locked': 0.0, 'total': 500.0}, 'HUMA': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'A': {'free': 1074.0, 'locked': 0.0, 'total': 1074.0}, 'SOPH': {'free': 17167.0, 'locked': 0.0, 'total': 17167.0}, 'RESOLV': {'free': 3431.0, 'locked': 0.0, 'total': 3431.0}, 'HOME': {'free': 12774.0, 'locked': 0.0, 'total': 12774.0}, 'SPK': {'free': 8206.0, 'locked': 0.0, 'total': 8206.0}, 'NEWT': {'free': 1939.0, 'locked': 0.0, 'total': 1939.0}, 'SAHARA': {'free': 5454.0, 'locked': 0.0, 'total': 5454.0}, 'LA': {'free': 1559.0, 'locked': 0.0, 'total': 1559.0}, 'ERA': {'free': 708.0, 'locked': 0.0, 'total': 708.0}, 'C': {'free': 2282.0, 'locked': 0.0, 'total': 2282.0}, 'TREE': {'free': 1538.0, 'locked': 0.0, 'total': 1538.0}, 'A2Z': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'TOWNS': {'free': 18446.0, 'locked': 0.0, 'total': 18446.0}, 'PROVE': {'free': 580.0, 'locked': 0.0, 'total': 580.0}, 'BFUSD': {'free': 500.0, 'locked': 0.0, 'total': 500.0}, 'PLUME': {'free': 6186.0, 'locked': 0.0, 'total': 6186.0}, 'DOLO': {'free': 2918.0, 'locked': 0.0, 'total': 2918.0}, 'MITO': {'free': 2623.0, 'locked': 0.0, 'total': 2623.0}, 'WLFI': {'free': 2723.0, 'locked': 0.0, 'total': 2723.0}, 'SOMI': {'free': 954.0, 'locked': 0.0, 'total': 954.0}}
+2025-10-01 12:06:15 | trading_bot | ERROR    | Unexpected order error: 'Client' object has no attribute 'get_oprn_orders'
+2025-10-01 12:06:15 | trading_bot | ERROR    | Open orders check failed: Failed to get orders
+2025-10-01 12:07:07 | trading_bot | ERROR    | Unexpected order error: 'Client' object has no attribute 'get_oprn_orders'
+2025-10-01 12:07:07 | trading_bot | ERROR    | Open orders check failed: Failed to get orders
+2025-10-01 12:07:32 | trading_bot | INFO     | Shutting down trading bot
+2025-10-01 12:07:34 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 12:07:34 | trading_bot | INFO     | Starting trading interface
+2025-10-01 12:07:34 | trading_bot | INFO     | Configuration loaded
+2025-10-01 12:07:34 | trading_bot | INFO     | Trading bot initialized successfully
+2025-10-01 12:07:35 | trading_bot | DEBUG    | API connection is successfully.
+2025-10-01 12:07:35 | trading_bot | INFO     | Account balance: 8855.80150000 USDT free | locked: 0.00000000 USDT
+2025-10-01 12:07:35 | trading_bot | INFO     | API connection validated
+2025-10-01 12:07:35 | trading_bot | INFO     | Trading interface initialized
+2025-10-01 12:07:36 | trading_bot | INFO     | Retrieved 0 open orders
+2025-10-01 12:07:42 | trading_bot | DEBUG    | Loaded 1512 valid symbols
+2025-10-01 12:07:43 | trading_bot | INFO     | Retrieved 1 trades for BTCUSDT
+2025-10-01 12:07:43 | trading_bot | ERROR    | Trade history failed: ('commission', '0')
+2025-10-01 12:07:59 | trading_bot | INFO     | Shutting down trading bot
+2025-10-01 12:10:44 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 12:10:44 | trading_bot | INFO     | Starting trading interface
+2025-10-01 12:10:44 | trading_bot | INFO     | Configuration loaded
+2025-10-01 12:10:44 | trading_bot | INFO     | Trading bot initialized successfully
+2025-10-01 12:10:45 | trading_bot | DEBUG    | API connection is successfully.
+2025-10-01 12:10:45 | trading_bot | INFO     | Account balance: 8855.80150000 USDT free | locked: 0.00000000 USDT
+2025-10-01 12:10:45 | trading_bot | INFO     | API connection validated
+2025-10-01 12:10:45 | trading_bot | INFO     | Trading interface initialized
+2025-10-01 12:10:50 | trading_bot | DEBUG    | Loaded 1512 valid symbols
+2025-10-01 12:10:50 | trading_bot | INFO     | Retrieved 1 trades for BTCUSDT
+2025-10-01 12:10:50 | trading_bot | INFO     | Viewed trade history for BTCUSDT
+2025-10-01 12:10:58 | trading_bot | INFO     | Shutting down trading bot
+2025-10-01 14:21:58 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 14:21:58 | trading_bot | INFO     | Starting trading interface
+2025-10-01 14:21:58 | trading_bot | INFO     | Configuration loaded
+2025-10-01 14:21:58 | trading_bot | CRITICAL | Initialized failed: APIError(code=0): Invalid JSON error message from Binance: <html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+
+2025-10-01 14:21:58 | trading_bot | CRITICAL | Application crashed: APIError(code=0): Invalid JSON error message from Binance: <html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+
+2025-10-01 14:23:19 | trading_bot | INFO     | 
+----------------------------------------------------------------------------------------------------
+2025-10-01 14:23:19 | trading_bot | INFO     | Starting trading interface
+2025-10-01 14:23:19 | trading_bot | INFO     | Configuration loaded
+2025-10-01 14:23:19 | trading_bot | CRITICAL | Initialized failed: APIError(code=0): Invalid JSON error message from Binance: <html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+
+2025-10-01 14:23:19 | trading_bot | CRITICAL | Application crashed: APIError(code=0): Invalid JSON error message from Binance: <html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+

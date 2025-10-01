@@ -4,34 +4,36 @@ from logger import logger
 def oco_order(client, symbol, side, quantity, price, stop_price, stop_limit_price):
     """Place an OCO (One-Cancels-Other) order"""
     try:
-        ticker = client.futures_symbol_ticker(symbol=symbol)
+        ticker = client.get_symbol_ticker(symbol=symbol)
         current_price = float(ticker['price'])
 
-        limit_order = client.futures_create_order(
-        symbol=symbol,
-        side='SELL' if side == 'BUY' else 'BUY',
-        type='LIMIT',
-        timeInForce='GTC', # Good Till Canceled
-        quantity=str(quantity),
-        price=str(price)
+        if side.upper() == 'BUY':
+            if price >= current_price:
+                raise ValueError("For BUY OCO, stop price should be BELOW current price for buying dips")
+            
+            if stop_price <= current_price:
+                raise ValueError("For BUY OCO, stop price should be ABOVE current price for protection")
+            
+        else:
+            if price <= current_price:
+                raise ValueError("For SELL OCO, limit price should be ABOVE currnent price for profit taking")
+            
+            if stop_price >= current_price:
+                raise ValueError("For SELL OCO, stop price should be BELOW current price for protection")
+
+        oco_place = client.order_oco(
+            symbol=symbol,
+            side=side.upper(),
+            quantity=str(quantity),
+            price=str(price),
+            stopPrice=str(stop_price),
+            stopLimitPrice=str(stop_limit_price),
+            stopLimitTimeForce='GTC'
         )
 
-        stop_order_type = 'STOP_MARKET'
-
-        if side == 'BUY' and stop_price > current_price:
-            raise ValueError("For BUY position, stop must be BELOW current price")
-        elif side == "SELL" and stop_price < current_price:
-            raise ValueError("For SELL position, stop price must be ABOVE current price")
-
-    # Place stop-loss order (using stop-market for simplicity)
-        stop_order = client.futures_create_order(
-        symbol=symbol,
-        side='SELL' if side == 'BUY' else 'BUY',
-        type=stop_order_type,
-        quantity=str(quantity),
-        stopPrice=str(stop_price))
-
-        return [limit_order, stop_order]
+        logger.info(f"OCO order placed successfully: {oco_order}")
+        return oco_order
+    
     except Exception as e:
         logger.error(f"OCO order failed: {str(e)}")
         raise
