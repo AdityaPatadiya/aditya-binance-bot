@@ -53,7 +53,7 @@ trading_bot/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/binance-futures-bot.git
+git clone https://github.com/AdityaPatadiya/aditya-binance-bot.git
 cd aditya-binance-bot
 ```
 
